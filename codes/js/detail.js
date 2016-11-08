@@ -27,110 +27,64 @@ function ajaxList(obj, eq, path){
  });
 
  window.onload=function(){
-			 var small=document.getElementById("small");
-			 var big= document.getElementById("big");
-			 var smallpic=document.getElementById("smallpic");
-			 var bigpic= document.getElementById("bigpic");
-			 var mask= document.getElementById("mask");
-			 
-			 var scale; //缩放比例
-			 
-			 small.onmouseover=function(){
-				  mask.style.display="block";
-				  big.style.display="block";
-					
-					scale= bigpic.offsetWidth/ small.offsetWidth ;
-					//console.log(scale);
-					//console.log(bigpic.offsetWidth);
-					//console.log(small.offsetWidth);
-					
-					mask.style.width= big.offsetWidth/scale +"px";
-					mask.style.height= big.offsetHeigth/scale+"px";
-					mask.style.cursor="pointer";
-			 }
-			 small.onmouseout=function(){
-				 mask.style.display="none";
-				 big.style.display="none";
-			 }
-			 small.onmousemove=function(evt){
-				  evt= evt||window.event;
-				  // mask.style.left= evt.x- mask.offsetWidth/2 +"px";
-					// mask.style.top= evt.y- mask.offsetHeight/2 +"px";
-					var left= evt.x- mask.offsetWidth/2;
-					var top= evt.y- mask.offsetHeight/2;
-					if(left<0){
-						left=0;
-					}
-					if(top<0){
-						top=0;
-					}
-					if(left>= small.offsetWidth- mask.offsetWidth){
-						left= small.offsetWidth- mask.offsetWidth;
-					}
-					if(top>=small.offsetHeight-mask.offsetHeight){
-						top=small.offsetHeight-mask.offsetHeight
-					}
+			 var oS_box=document.getElementById('s_box');
+		var oS_position=oS_box.children[2];
+		var oS_mark=oS_box.children[0];
+		var oB_box=document.getElementById('b_box');
+		var oB_box_all=document.getElementById('b_box_all')
+		oS_mark.onmouseover=function(){
+			oS_position.style.display='block';
+			oB_box.style.display='block';
 
-					mask.style.left= left+"px";
-					mask.style.top= top+"px";
-					
-					bigpic.style.left= -mask.offsetLeft* scale +"px";
-					bigpic.style.top= -mask.offsetTop *scale +"px";
-			 }
+		}
+		oS_mark.onmouseout=function(){
+			oS_position.style.display='none';
+			oB_box.style.display='none';
+		}
+
+		oS_mark.onmousemove=function(event){
+			var evt=event||window.event;
+
+			var left=evt.offsetX-oS_position.offsetWidth/2;
+			//console.log(left)
+			
+			if(left<0){
+				left=0;
+			}else if(left>oS_box.offsetWidth-oS_position.offsetWidth){
+				left=oS_box.offsetWidth-oS_position.offsetWidth
+			}
+			//console.log(left)
+			oS_position.style.left=left+'px';
+
+
+			var top=evt.offsetY-oS_position.offsetHeight/2;
+			if(top<0){
+				top=0;
+			}else if(top>oS_box.offsetHeight-oS_position.offsetHeight){
+				top=oS_box.offsetHeight-oS_position.offsetHeight
+			}
+			//console.log(top)
+			oS_position.style.top=top+'px';
+
+			//移动的比例  把X值和Y值换算成比例;
+
+			var proportionX=left/(oS_box.offsetWidth-oS_position.offsetWidth);
+			var proportionY=top/(oS_box.offsetHeight-oS_position.offsetHeight);
+
+			console.log(proportionX+':'+proportionY)
+
+			//利用比例去算出大小不同的元素的偏移距离；
+
+			oB_box_all.style.left=-proportionX*(oB_box_all.offsetWidth-oB_box.offsetWidth)+'px';
+
+			oB_box_all.style.top=-proportionY*(oB_box_all.offsetHeight-oB_box.offsetHeight)+'px';
+
+		}
+
+
+		
 		 }
- window.onload=function(){
-			 var small=document.getElementById("small");
-			 var big= document.getElementById("big");
-			 var smallpic=document.getElementById("smallpic");
-			 var bigpic= document.getElementById("bigpic");
-			 var mask= document.getElementById("mask");
-			 
-			 var scale; //缩放比例
-			 
-			 small.onmouseover=function(){
-				  mask.style.display="block";
-				  big.style.display="block";
-					
-					scale= bigpic.offsetWidth/ small.offsetWidth ;
-					//console.log(scale);
-					//console.log(bigpic.offsetWidth);
-					//console.log(small.offsetWidth);
-					
-					mask.style.width= big.offsetWidth/scale +"px";
-					mask.style.height= big.offsetHeigth/scale+"px";
-					mask.style.cursor="pointer";
-			 }
-			 small.onmouseout=function(){
-				 mask.style.display="none";
-				 big.style.display="none";
-			 }
-			 small.onmousemove=function(evt){
-				  evt= evt||window.event;
-				  // mask.style.left= evt.x- mask.offsetWidth/2 +"px";
-					// mask.style.top= evt.y- mask.offsetHeight/2 +"px";
-					var left= evt.x- mask.offsetWidth/2;
-					var top= evt.y- mask.offsetHeight/2;
-					if(left<0){
-						left=0;
-					}
-					if(top<0){
-						top=0;
-					}
-					if(left>= small.offsetWidth- mask.offsetWidth){
-						left= small.offsetWidth- mask.offsetWidth;
-					}
-					if(top>=small.offsetHeight-mask.offsetHeight){
-						top=small.offsetHeight-mask.offsetHeight
-					}
-
-					mask.style.left= left+"px";
-					mask.style.top= top+"px";
-					
-					bigpic.style.left= -mask.offsetLeft* scale +"px";
-					bigpic.style.top= -mask.offsetTop *scale +"px";
-			 }
-		 }
-
+ 
 
 
 

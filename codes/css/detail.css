@@ -302,42 +302,52 @@
 
 
 /*放大镜*/
- #small{
-  width:300px;
-	height:450px;
-	position:absolute;
-	left:0;
-	top:0;
-}
-#smallpic{
-  width:100%;
-	height:100%;
-	position:absolute;
-	left:0;
-	top:0;
-}
-#mask{
-  position:absolute;
-	left:0;
-	top:0;
-	width:100px;
-	height:100px;
-	background:rgba(255,255,0,0.5);
-	display:none;
-	z-index:1;
-}
-#big{
-  position:absolute;
-	left:300px;
-	top:0;
-	width:300px;
-	height:450px;
-	display:none;
-	overflow:hidden; 
-}
-#bigpic{
-	position:absolute;
-}
+ .goods_img_bg img{
+		width: 100%;
+		height: 100%;
+	}
+	#s_box{
+		width: 200px;
+		height: 150px;
+		position: relative;
+		left: 00px;
+		top: 50px;
+	}
+	#s_box .position_box{
+		width: 100px;
+		height: 75px;
+		background: #b6b6b6;
+		opacity: 0.6;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 1;
+		display: none;
+	}
+	#s_box .mark_box{
+		width: 200px;
+		height: 150px;
+		position: absolute;
+		left: 0;
+		top: 0;
+		z-index: 10;
+	}
+	#b_box{
+		width: 400px;
+		height: 300px;
+		overflow: hidden;
+		position: relative;
+		left: 230px;
+		top: -150px;
+		display: none;
+	}
+	#b_box_all{
+		position: absolute;
+		width:1200px;
+		height: 900px; 
+		left: 0;
+	}
+	
 
 
 
