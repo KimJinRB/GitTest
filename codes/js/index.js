@@ -8,14 +8,14 @@ function ajaxGoods(obj, eq, path){
 		success: function(data){
 			var html = "";
 			for(var i = 0; i < data.length; i++){
-				html += "<dl id = '" + data[i].id + "'><dt><a href='#'><img src='" + 
+				html += "<dl id = '" + data[i].id + "'><dt><a href='http://10.9.160.130/codes/html/detail.html'><img src='" + 
 				data[i].img + "'/></a></dt><dd><a href='#'><strong>" + 
 				data[i].title + "</strong></a><div class = 'lis_1'>Q币价<span class = 't2'>&nbsp;&nbsp;&nbsp;" + 
 				data[i].Qbi + "</span><span class = 't2_fwd'>Q币</span></div><div class = 'lis_1'>财付通价<span class = 't2_fwd'>&nbsp;&nbsp;￥</span><span class = 't2'>" + 
 				data[i].mony + "</span></div><div class = 'lis_2'><a href='#'>立即购买</a></div></dd></dl>"			
 			}
 			obj.eq(eq).html(html);
-			$(".content .con_main dl").mouseenter(function(){
+			$(".content .con_main .con dl").mouseenter(function(){
 				$(this).css("background", "red");
 				$(this).find("dd").find("strong").css("color", "white");
 				$(this).find("dd").find("div").css("color", "white");
@@ -45,7 +45,7 @@ function ajaxHot(obj, eq, path){
 			//alert(data);
 			var html = "";
 			for(var i = 0; i < data.length; i++){
-				html += "<li class = 'small'><dl><dt><a href = '#'><img src = '" + 
+				html += "<li class = 'small'><dl><dt><a href = 'http://10.9.160.130/codes/html/detail.html'><img src = '" + 
 				data[i].img + "'/></a></dt><dd><span class = '" + 
 				data[i].class + "'>" +
 				data[i].num + "</span><p><a href = '#'>" + 
@@ -82,7 +82,7 @@ function ajaxBuy(obj, eq, path){
 			var html = "";
 			for(var i = 0; i < data.length; i++){
 				//timer();
-				html += "<li><div class = 'time'>剩余<span></span>天<span></span>时<span></span>分<span></span>秒</div><div class = 'sub1'><a href='#'><img src='" + 
+				html += "<li><div class = 'time'>剩余<span></span>天<span></span>时<span></span>分<span></span>秒</div><div class = 'sub1'><a href='http://10.9.160.130/codes/html/detail.html'><img src='" + 
 				data[i].img + "'></a><p class = 'many'>直降<span>" + 
 				data[i].down + "元</span></p><p class = 'name'><a href='#'>" + 
 				data[i].name + "</a></p></div><div class = 'sub2'><p>财付通<span><em>" + 

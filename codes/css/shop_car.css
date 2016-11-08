@@ -1,0 +1,249 @@
+
+.wrapper{
+	width: 1000px;
+	margin: 0 auto;
+}
+
+
+/*坐标栏*/
+.location{height:30px;
+    line-height: 30px;
+    display: block;
+    clear: both;
+    font-family: "Microsoft YaHei";
+}
+.location a {
+    margin: 0 5px;
+    color: #535353;
+}
+
+.box{z-index: 999;}
+.m_t_8 {
+    margin-top: 8px;
+}
+.clear {
+    display: block;
+    clear: both;
+}
+.cart_list_table {
+    width: 100%;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    border-color: inherit;
+}
+.cart_list_table thead th {padding: 8px 0;
+    vertical-align: middle;
+    word-break: break-all;
+    font-weight: 800;
+    border-top: 2px solid #c60000;
+    background-color: #e6e6e6;}
+.cart_total_box {
+    min-height: 34px;
+    _height: 34px;
+    line-height: 34px;
+    border: 1px solid #DEDFDE;
+    background-color: #f3f3f3;
+}
+.clear {
+    display: block;
+    clear: both;
+}
+.l {
+    float: left;
+}
+.m_r_5 {
+    margin-right: 5px;
+}
+.font_s14 {
+    font-size: 14px;
+}
+.font_red_b {
+    color: #de1407;
+    font-weight: bold;
+}
+.m_r_5 {
+    margin-right: 5px;
+}
+.m_t_16 {
+    margin-top: 16px;
+}
+.title05 {
+    height: 24px;
+    line-height: 24px;
+    border-bottom: 2px solid #cc0000;
+    border-top: 1px solid #f3f3f3;
+    background: #f8f8f8;
+    padding: 0 12px;
+}
+.title05 h2{font-weight: bold;
+}
+.discount_info .tcon {
+    margin-top: 15px;
+}
+.discount_info .tcon a {
+    color: #505050;
+}
+.discount_info .tcon a s {
+    float: left;
+    width: 12px;
+    height: 12px;
+    background: url(../img/comm_ico.png) no-repeat -61px -718px;
+    overflow: hidden;
+    margin: 5px 5px 0 0;
+}
+.font_red {
+    color: #de1407;
+}
+.discount_info .tcon a.link {
+    color: #0079bd;
+    margin-left: 10px;
+    text-decoration: underline;
+    font-weight: 400;
+}
+.m_t_24 {
+    margin-top: 24px;
+}
+.pay_group {height:60px;
+    padding-bottom: 10px;
+}
+.pay_group .label{
+    width: auto;
+    margin-left: 12px;
+    display: inline;
+    width: 160px;
+    float: left;
+    padding-top: 8px;}
+.cart_t1 {
+    background: #fffeee;
+    border: 1px solid #ffdbdb;
+    height: 40px;
+    line-height: 40px;
+    display: block;
+    overflow: hidden;
+    padding: 0 32px;
+    color: #505050;
+    font-size: 16px;
+    text-align: right;
+}
+.m_t_8 {
+    margin-top: 8px;
+}
+.cart_t1 {line-height: 40px;
+         color: #505050;font-size: 16px;
+         text-align: right;}
+.font_red_b {
+    color: #de1407;
+    font-weight: bold;
+}
+.confirm_bar {
+    margin: 20px 0;
+    text-align: right;
+    height: 39px;
+}
+.btn_confirm {
+    display: block;
+    width: 121px;
+    height: 39px;
+    background: url(../img/comm_ico.png) no-repeat 0 -2222px;
+    text-align: left;
+    float: right;
+}
+.cart_payment_rules {
+    width: 100%;
+    border: 1px solid #ffdbdb;
+    padding-bottom: 20px;
+}
+.cart_payment_rules_title {
+    width: 77px;
+    height: 20px;
+    line-height: 20px;
+    text-align: center;
+    margin: 20px 10px 10px 40px;
+}
+.cart_payment_rules ol li {
+    list-style: inside decimal;
+    padding: 2px 45px;
+}         
+.cart_other_box {
+    padding: 30px 0;
+}
+.m_t_24 {
+    margin-top: 24px;
+}
+.title_box {
+    background: url(../images/solid.png) repeat-x left bottom;
+    height: 31px;
+    position: relative;
+    z-index: 3;
+    font-weight: bold;
+    font-size: 14px;
+    font-family: "Microsoft YaHei";
+    padding-left: 30px;
+}
+.cart_other_box ul li {
+    float: left;
+    text-align: center;
+    display: inline;
+    margin: 0 5px 0 0 !important;
+    height: 31px;
+}
+.title_box .focus, .title_box li a.focus, .title_box li a:hover {
+    background-position: -326px -80px;
+    color: #564e4c;
+}
+.title_box li a {
+    background: url(../images/commen.png) no-repeat;
+    background-position: -237px -80px;
+    display: block;
+    height: 31px;
+    line-height: 31px;
+    width: 89px;
+    color: #8d8887;
+    font-weight: bold;
+    text-align: center;
+}
+.title_box li a:hover {
+    text-decoration: none;
+}
+.title_box_dl {
+    width: 960px;
+    margin: 0 auto;
+}
+.title_box_dl dl {
+    float: left;
+    width: 210px;
+    margin: 15px;}
+.title_box_dl dt {
+    float: left;
+    width: 80px;
+    height: 80px;
+    display: block;
+    overflow: hidden;
+}
+.title_box_dl dt a {
+    width: 80px;
+    height: 80px;
+    display: block;
+    overflow: hidden;
+}
+.title_box_dl dd {
+    float: right;
+    width: 116px;
+    line-height: 22px;
+    color: #564e4c;
+}
+.title_box_dl dd strong {
+    height: 22px;
+    width: 112px;
+    display: inline-block;
+    overflow: hidden;
+}
+.font_s14 {
+    font-size: 14px;
+}
+.font_red_b {
+    color: #de1407;
+    font-weight: bold;
+}

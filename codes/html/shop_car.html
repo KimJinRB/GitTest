@@ -4,6 +4,7 @@
 	<head>
 		<meta charset="{CHARSET}">
 		<title></title>
+		<link rel="stylesheet" href="../css/shop_car.css" />
 		<link rel="stylesheet" href="../css/shop.css" />
 		<link rel="stylesheet" href="../css/index.css" />
 		<link rel="stylesheet" href="../css/style.css" />
@@ -14,7 +15,7 @@
 		<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
 		<script type="text/javascript" src="../js/jquery.cookie.js"></script>
 		<script type="text/javascript" src="../js/index.js"></script>
-		<script type="text/javascript" src="../js/shop.js"></script>
+		<script type="text/javascript" src="../js/shop_car.js"></script>
 	</head>
 
 	<body>
@@ -91,7 +92,7 @@
 				</div>
 				<div id="unlogin">
 					亲您还未登录，请
-					<a href="#">登录</a>
+					<a href="http://10.9.160.130/codes/html/login.html">登录</a>
 				</div>
 			</div>
 			<div class="top_search">
@@ -200,16 +201,16 @@
 				<div class="box2">
 					<ul>
 						<li class="">
-							<a href="#">首页</a><span></span></li>
+							<a href="http://10.9.160.130/codes/">首页</a><span></span></li>
 						<li class="">
-							<a href="#">商品列表</a><span></span></li>
+							<a href="http://10.9.160.130/codes/html/shop.html">商品列表</a><span></span></li>
 						<li class="">
 							<a href="#">活动专区</a><span></span></li>
 						<li class="">
 							<a href="#">个人中心</a><span></span></li>
 					</ul>
 					<div class="car">
-						<a href="#">
+						<a href="http://10.9.160.130/codes/html/shop_car.html">
 							<span class="car_bg"></span>
 							<span>
 							我的购物车
@@ -220,214 +221,233 @@
 				</div>
 			</div>
 		</div>
-		<div class="location_box">您现在的位置：
-			<a href="#">英雄联盟</a>>
-			<a href="#">全部商品</a>>
-			<a href="#">英雄</a>
-		</div>
-
-		<!--主体内容-->
-		<div class="content" id="cont">
-			<div class="con_main" id="shop_main">
-				<div class="bar_left">
-					<div class="good_left">
-						<div class="sub_box">
-							<h3 class="title">
-								<a href = "#">英雄(133)</a>
-							</h3>
-						</div>
+		<div class="wrapper">
+			<div class="location">
+				您现在的位置：
+				<a href="/lol/">英雄联盟</a>&gt;
+				<a href="/lol/list/shoppinglist.shtml">购物车</a>
+			</div>
+			<div class="box">
+				<div class="cart_list_box m_t_8 clear">
+					<table border="0" class="cart_list_table">
+						<thead>
+							<tr style="border-bottom: 1px dotted #DEDFDE">
+								<th scope="col" width="17px"></th>
+								<th scope="col">商品名称</th>
+								<th width="150" scope="col">赠送</th>
+								<th scope="col">类型</th>
+								<th scope="col">单价</th>
+								<th scope="col">返点</th>
+								<th scope="col">期限</th>
+								<th scope="col" width="110px">数量</th>
+								<th scope="col">优惠</th>
+								<th scope="col">小计</th>
+								<th scope="col">操作</th>
+							</tr>
+						</thead>
+					</table>
+					<div class="cart_total_box clear">
+						<p class="l" style="margin-left:17px">
+							<label class="font_blue" style="margin-left:0">商品件数/最大件数</label>
+							<span id="cart_status"></span>
+						</p>
+						<p class="r m_r_5">
+							共
+							<span id="current_num"></span>个商品 总价：
+							<span class="font_red_b font_s14 m_r_5" id="total_QB"></span>Q币
+						</p>
 					</div>
-
-					<!--热门排行-->
-					<div class="con_hot">
-						<div class="title">
-							<h2>热门排行
-							<span>HOT</span>
-						</h2>
+					<div id="yhq_info" class="cart_payment_box cart_payment_box_none m_t_16 clear">
+						<div class="title05 m_t_16">
+							<h2>您的优惠信息</h2>
 						</div>
-						<ul>
+						<div class="c discount_info">
+							<div id="tab_gwd" class="tcon" style="">
+								<a href="javascript:void(0);" class="toggle" id="btnUseGwd">
+									<s class=""></s>使用购物点（<span class="font_red gwd_num">0</span>）
+								</a>
+								<a href="http://daoju.qq.com/mall/help/help_ticket.shtml" class="link" target="_blank">[查看购物点使用说明]</a>
+							</div>
+							<div id="bcon_gwd" class="bcon" style="display:none;">
+								<div class="gwd">
+									<p>购物点可用余额：
+										<b id="remain_gwd" class="font_red gwd_num">0</b>
+									</p>
 
-						</ul>
-					</div>
-					<div class="title-box">
-						<h2 class="title-txt">最近浏览过的商品</h2>
-						<a href="javascript:void(0)" class="clear_history">清除浏览历史</a>
+									<p class="c">
+										<span class="l">本次使用
+                        					<input type="text" class="input" id="inptGwd" value="0" autocomplete="off">购物点抵扣
+                        				</span>
+										<a href="javascript:void(0);" class="l btn" onclick="UserGwd();">使用</a>
+									</p>
+								</div>
+							</div>
+						</div>
 					</div>
 				</div>
-				<div class="bar_right">
-					<div class="like" id="like_shop">
-						<div class="title">
-							<h2>热门推荐
-							<span>RECOMMENDED ITEMS</span>
-						</h2>
-						</div>
-						<div class="con">
+				<div class="cart_payment_box cart_payment_box_none m_t_16 clear">
+					<div class="title05">
+						<h2>收货角色信息</h2>
+					</div>
+					<div class="m_t_24 c">
+						<div class="pay_group c role" id="step_1">
+							<span class="label">选择游戏角色：</span>
+							<ul>
+								<li>
+									<select style="display:none;" name="area" id="area">
+										<option value="">请选择大区</option>
+									</select>
+									<select style="display:none" name="iZone" id="iZone" onchange="changeEvent(this);">
+										<option value="">请选择服务器</option>
+									</select>
+									<select style="display:none" name="iRoleId" id="iRoleId">
+										<option value="">请选择角色</option>
+									</select>
+									<span id="error_info" class="font_red"></span>
+								</li>
+							</ul>
 						</div>
 					</div>
-					<div class="filter_box">
-						<div class="filter_title ">
-							<h3 class="l b">商品筛选</h3>
-							
-						</div>
-						<ul id="tags_ul" class="tags_ul" style="">
-				<li><input name="tagbox_all" id="tagbox_all" type="checkbox" value="">全部</li><li><input name="tagbox" type="checkbox" value="0">刺客</li><li><input name="tagbox" type="checkbox" value="1">坦克</li><li><input name="tagbox" type="checkbox" value="2">法师</li><li><input name="tagbox" type="checkbox" value="3">辅助</li><li><input name="tagbox" type="checkbox" value="4">后期</li><li><input name="tagbox" type="checkbox" value="5">战士</li><li><input name="tagbox" type="checkbox" value="6">推进</li><li><input name="tagbox" type="checkbox" value="7">新手</li><li><input name="tagbox" type="checkbox" value="8">潜行</li><li><input name="tagbox" type="checkbox" value="9">打野</li></ul>
-						<ul>
-							<li>
-								<label>关键字：</label>
-								<input name="" type="text" id="search_dj_txt" class="input_txt font_red" style="margin-left:3px">
-							</li>
-							<li>
-								<span class="order_span">
-									<a href="javascript:void(0);" id="btn_filter_time">上架时间
-										<em class="btn_filter_up_on"></em>
-									</a>
-									<a href="javascript:void(0);" id="btn_filter_sales">销量
-										<em class="btn_filter_down"></em>
-									</a>
-									<a href="javascript:void(0);" id="btn_filter_price">价格
-										<em class="btn_filter_down"></em>
-									</a>
-								</span>
-							</li>
-							<li style="text-align: left;">价格区间（QB）
-								<input name="" type="text" class="input_area_txt" id="from_pr">
-								<label>-</label>
-								<input name="" id="to_pr" type="text" class="input_area_txt">
-							</li>
-							<li>
-								<a href="#" class="btn_e" id="search_btn" title="确定">确定</a>
-							</li>
-						</ul>
-						<div class="bx_list_nav c" style="background: none;">
-							<p class="fm_check">
-								<input type="checkbox" name="cates" value="购物点支付" id="all_fashion" style="cursor:pointer">
-								<label for="all_fashion" style="cursor:pointer">购物点支付</label>
-								<input type="checkbox" name="cates" value="返购物点" id="arms_fashion" style="cursor:pointer">
-								<label for="arms_fashion" style="cursor:pointer">返购物点</label>
-							</p>
-							<a title="促销打折" class="sale">促销打折</a>
-							<a title="最新上架" class="new">最新上架</a>
-							<a title="热门推荐" class="hot">热门推荐</a>
-						</div>
-					</div>
-					<div class = "product_list">
-						<div class="con">
-
-						</div>
-					</div>
-					<div class="page_box" uri="/lol/list/0-0-0-0-0-0-0-0-0-0-0-00-0-0-1-" ext="shtml" total="41">
-						<a class="prv_off_btn page_bg " href="/lol/list/0-0-0-0-0-0-0-0-0-0-0-00-0-0-1-1.shtml" title="上一页">
-							<em class="prv_off_icon">
-								
-							</em>上一页
-						</a>
-						<span class="page_num">
-							<a class="cur_page_bg">1</a>
-							<a class="page_bg" href="/lol/list/0-0-0-0-0-0-0-0-0-0-0-00-0-0-1-2.shtml">2</a>
-							<a class="page_bg" href="/lol/list/0-0-0-0-0-0-0-0-0-0-0-00-0-0-1-3.shtml">3</a>
-							<a class="page_bg" href="/lol/list/0-0-0-0-0-0-0-0-0-0-0-00-0-0-1-4.shtml">4</a>
-							<a class="page_bg" href="/lol/list/0-0-0-0-0-0-0-0-0-0-0-00-0-0-1-5.shtml">5</a>
+					<div class="cart_t1 m_t_8">
+						<span style="float:left;display:inline-block;color:red;font-weight:bold;font-size:12px;text-align:left;">
+        					<span style="max-width:320px;overflow:hidde;word-wrap:break-word;float:left;">11.11狂欢消费抽iPhone！</span>
+						<a href="http://act.daoju.qq.com/act/a20161022double11/cj.html?ADTAG=daoju.pc.djc.1107" target="_blank">查看详情</a>
 						</span>
-						<a class="next_on_btn page_bg" href="/lol/list/0-0-0-0-0-0-0-0-0-0-0-00-0-0-1-2.shtml" title="下一页">下一页
-							<em class="next_on_icon"></em>
-						</a>
-						<span>共
-							<em>41</em>
-							页到第
-							<input name="goto_page" id="goto_page" type="text" class="input_area_txt">
-							页
+						<span id="price_info" style="display: none;">
+						总价:
+							<span class="font_red_b" id="js_total_QB"></span> - 优惠券:
+						<span class="font_red_b" id="js_yhq_QB"></span> -购物点:
+						<span class="font_red_b" id="js_gwd_QB"></span>=
 						</span>
-						<a class="btn_page_ok" id="goto_page_btn" href="javascript:void(0);"></a>
+						实付款:
+						<span id="js_real_QB_area">
+            				<span class="font_red_b" id="js_real_QB">0.00
+            				</span>Q币</span>
+						<span id="js_real_DQ_area" style="display:none;">
+                				<span class="font_red_b" id="js_real_DQ"></span>点券
+						</span>
 					</div>
-					<div class="like_box">
-						<div class="like_title">
-							<h2 class="like_txt">猜你喜欢（根据浏览行为推荐）</h2>
-						</div>
-						<ul>
-							<li pos="41">
-								<a target="_blank" href="/lol/item/601.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11043.1001.0"><img width="80" height="80" alt="无双剑姬" src="../images/champions_114.png">
-								</a>
-								<p>
-									<a target="_blank" href="/lol/item/601.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11043.1001.0">
-										<em>无双剑姬</em>
-									</a>
-								</p>
-								<p>Q币：<span class="font_red">45.00Q币</span></p>
-								<p>财付通：
-									<span class="font_red">¥42.75</span>
-								</p>
+					<div class="confirm_bar" id="step_2">
+						<a class="btn_confirm ht" href="javascript:AddOrder();">提交订单</a>
+					</div>
+					<div class="cart_payment_rules">
+						<h3 class="cart_payment_rules_title fwb">温馨提示：</h3>
+						<ol>
+							<li>
+								<span style="color:red">限定皮肤不支持优惠券购买。</span>
 							</li>
-							<li pos="41">
-								<a target="_blank" href="/lol/item/768.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11043.1001.0">
-									<img width="80" height="80" alt="苍穹之光 韦鲁斯" src="../images/110002.png">
-								</a>
-								<p>
-									<a target="_blank" href="/lol/item/768.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11043.1001.0">
-										<em>苍穹之光 韦鲁斯</em>
-									</a>
-								</p>
-								<p>Q币：
-									<span class="font_red">99.00Q币</span>
-								</p>
-								<p>财付通：
-									<span class="font_red">¥94.05</span>
-								</p>
+							<li>
+								<span style="color:red">购物点和优惠券不能同时使用。</span>
 							</li>
-							<li pos="41">
-								<a target="_blank" href="/lol/item/620.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11043.1001.0">
-									<img width="80" height="80" alt="夜魔水晶 韦鲁斯" src="../images/110001.png">
-								</a>
-								<p>
-									<a target="_blank" href="/lol/item/620.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11043.1001.0">
-										<em>夜魔水晶 韦鲁斯</em>
-									</a>
-								</p>
-								<p>Q币：
-									<span class="font_red">45.00Q币</span>
-								</p>
-								<p>财付通：
-									<span class="font_red">¥42.75</span>
-								</p>
+							<li>购买成功后系统会自动发货，如发货失败24小时内会自动补发。</li>
+							<li>请确认游戏中是否存在购物车中的英雄或皮肤，如果存在，请勿重复购买。</li>
+							<li>使用优惠券购买，目前支付方式仅支持Q币Q点和微支付。</li>
+							<li>
+								<span style="color:red">优惠券分为英雄和皮肤两种，购物车中对应类别的商品满足条件才能使用，使用时请注意优惠券的有效日期 （例如满100元送50的英雄优惠券，购物车中的英雄类商品必须满100元才能使用）。</span>
 							</li>
-							<li pos="41">
-								<a target="_blank" href="/lol/item/1098.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11043.1001.0"><img width="80" height="80" alt="韦鲁斯·迅箭" src="../images/2_110005.jpg">
-								</a>
-								<p>
-									<a target="_blank" href="/lol/item/1098.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11043.1001.0">
-										<em>韦鲁斯·迅箭</em>
-									</a>
-								</p>
-								<p>Q币：
-									<span class="font_red">49.00Q币</span>
-								</p>
-								<p>财付通：
-									<span class="font_red">¥46.55
-									</span>
-								</p>
-							</li>
-							<li pos="41">
-								<a target="_blank" href="/lol/item/619.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11043.1001.0"><img width="80" height="80" alt="惩戒之箭" src="../images/champions_110.png">
-								</a>
-								<p>
-									<a target="_blank" href="/lol/item/619.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11043.1001.0">
-										<em>惩戒之箭</em>
-									</a>
-								</p>
-								<p>Q币：
-									<span class="font_red">35.00Q币</span>
-								</p>
-								<p>财付通：
-									<span class="font_red">¥33.25
-									</span>
-								</p>
-							</li>
-						</ul>
+							<li>请重新登录游戏查收物品。</li>
+						</ol>
 					</div>
 				</div>
 			</div>
+			<div class="cart_other_box m_t_24 clear">
+				<div class="title_box">
+					<ul>
+						<li>
+							<a href="javascript:void(0);" class="focus">猜你喜欢</a>
+						</li>
+						<li>
+							<a href="javascript:void(0);" id="last_attend" class="">最近关注</a>
+						</li>
+						<!-- <li><a href="javascript:void(0);">猜你喜欢</a></li> -->
+					</ul>
+				</div>
+				<!-- 本周热门 -->
+				<div id="cart_other_tab_0" style="display: block;">
+					<div class="title_box_dl c" id="cnxh_list" style="height:110px;overflow:hidden">
+						<dl pos="71">
+							<dt>     
+            						<a href="item/1376.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11083.1001.0" target="_blank">
+            							<img src="../images/ac051.jpg" width="80" height="80" alt="诺克萨斯之手 德莱厄斯 铁血将军礼包">
+            						</a>    
+            					</dt>
+							<dd>
+								<strong>诺克萨斯之手 德莱厄斯 铁血将军礼包</strong>
+								<p> Q币价：
+									<span class="font_red_b font_s14">65.00 </span>Q币
+								</p>
+								<p> 财付通：
+									<span class="font_red_b font_s14">¥61.75</span>
+								</p>
+							</dd>
+						</dl>
+						<dl pos="71">
+							<dt>     
+            						<a href="item/654.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11083.1001.0" target="_blank">
+            							<img src="../images/4006.png" width="80" height="80" alt="皇家火枪手 崔斯特">
+            						</a>    
+            					</dt>
+							<dd>
+								<strong>皇家火枪手 崔斯特
+            						</strong>
+								<p> Q币价：
+									<span class="font_red_b font_s14">45.00 
+            							</span>Q币
+								</p>
+								<p> 财付通：
+									<span class="font_red_b font_s14">¥42.75
+            							</span>
+								</p>
+							</dd>
+						</dl>
+						<dl pos="71">
+							<dt>     
+            						<a href="item/947.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11083.1001.0" target="_blank">
+            							<img src="../images/2_122004.jpg" width="80" height="80" alt="灌篮高手 德莱厄斯">
+            						</a>    
+            					</dt>
+							<dd>
+								<strong>灌篮高手 德莱厄斯</strong>
+								<p> Q币价：
+									<span class="font_red_b font_s14">69.00 
+            							</span>Q币
+								</p>
+								<p> 财付通：
+									<span class="font_red_b font_s14">¥65.55
+            							</span>
+								</p>
+							</dd>
+						</dl>
+						<dl pos="71">
+							<dt>     
+            						<a href="item/236.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11083.1001.0" target="_blank">
+            							<img src="../images/69001.png" width="80" height="80" alt="荒漠之咬 卡西奥佩娅">
+            						</a>    
+            					</dt>
+							<dd>
+								<strong>荒漠之咬 卡西奥佩娅</strong>
+								<p> Q币价：
+									<span class="font_red_b font_s14">45.00 
+            							</span>Q币
+								</p>
+								<p> 财付通：
+									<span class="font_red_b font_s14">¥42.75
+            							</span>
+								</p>
+							</dd>
+						</dl>
+					</div>
+				</div>
+			</div>
+			<!--最近关注-->
+
+			<div id="cart_other_tab_1" style="display: none;">
+				<div class="title_box_dl c" id="attention_good" style="display: block;"></div>
+			</div>
 
 		</div>
-
+		</div>
+		</div>
 		<!--服务内容-->
 		<div class="infor">
 			<div class="infor_box">
@@ -506,7 +526,7 @@
 	</body>
 	<script type="text/javascript">
 		$(function() {
-
+			
 			ajaxGoods($(".con"), 0, "../../codes/json/datass.json");
 			ajaxGoods($(".con"), 1, "../../codes/json/prodact1.json");
 			ajaxHot($(".con_hot").find("ul"), 0, "../../codes/json/hot1.json");
@@ -515,7 +535,10 @@
 			ajaxGame($(".top").find(".box").find(".inner").find("#athle"), 0, "../../codes/json/game2.json");
 			ajaxGame($(".top").find(".box").find(".inner").find("#relaxa"), 0, "../../codes/json/game3.json");
 			ajaxGame($(".top").find(".box").find(".inner").find("#webpage"), 0, "../../codes/json/game4.json");
+			
+
 		});
 	</script>
+	</body>
 
 </html>
