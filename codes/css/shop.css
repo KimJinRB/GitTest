@@ -383,3 +383,42 @@
 .font_red {
 	color: #de1407;
 }
+
+/*提示框*/
+.point{
+	width: 370px;
+	height: 160px;
+	border: 8px solid #eee;
+	padding: 15px;
+	z-index: 1001;
+    visibility: visible;
+    left: 442px;
+    top: 349.5px;
+     position: fixed;
+     background: #FFF;
+     display: none;
+     
+}
+   
+
+.point h2{
+	color: blue;
+	font-size: 20px;
+}
+.point .main{
+	width: 360px;
+	height:70px;
+	padding-top: 40px;
+
+}
+.point a{
+	float: right;
+	margin-right: 20px;
+	cursor: pointer;
+	color: black;
+	width: 80px;
+	height: 21px;
+	line-height: 21px;
+	text-align: center;
+	background: grey;
+}

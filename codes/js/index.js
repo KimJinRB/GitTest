@@ -8,11 +8,11 @@ function ajaxGoods(obj, eq, path){
 		success: function(data){
 			var html = "";
 			for(var i = 0; i < data.length; i++){
-				html += "<dl id = '" + data[i].id + "'><dt><a href='http://10.9.160.130/codes/html/detail.html'><img src='" + 
+				html += "<dl><dt><a href='http://10.9.160.130/codes/html/detail.html'><img src='" + 
 				data[i].img + "'/></a></dt><dd><a href='#'><strong>" + 
 				data[i].title + "</strong></a><div class = 'lis_1'>Q币价<span class = 't2'>&nbsp;&nbsp;&nbsp;" + 
 				data[i].Qbi + "</span><span class = 't2_fwd'>Q币</span></div><div class = 'lis_1'>财付通价<span class = 't2_fwd'>&nbsp;&nbsp;￥</span><span class = 't2'>" + 
-				data[i].mony + "</span></div><div class = 'lis_2'><a href='#'>立即购买</a></div></dd></dl>"			
+				data[i].mony + "</span></div><div class = 'lis_2'><a href='#' class = 'addcarbtn' id = '" + data[i].id + "'>立即购买</a></div></dd></dl>"			
 			}
 			obj.eq(eq).html(html);
 			$(".content .con_main .con dl").mouseenter(function(){
@@ -22,7 +22,7 @@ function ajaxGoods(obj, eq, path){
 				$(this).find("dd").find("span").css("color", "yellow");
 				$(this).find("dd").find(".lis_2").find("a").css("color", "black");
 				$(this).find("dd").find(".lis_2").find("a").css("background", "yellow");
-			})
+			});
 			$(".content .con_main dl").mouseleave(function(){
 				$(this).css("background", "white");
 				$(this).find("dd").find("strong").css("color", "black");
@@ -30,7 +30,10 @@ function ajaxGoods(obj, eq, path){
 				$(this).find("dd").find("span").css("color", "red");
 				$(this).find("dd").find(".lis_2").find("a").css("color", "white");
 				$(this).find("dd").find(".lis_2").find("a").css("background", "red");
-			})
+			});
+			$(".addcarbtn").click(function(){
+				$(".point").css("display", "block");
+			});
 		}		
 	});	
 }
@@ -87,7 +90,7 @@ function ajaxBuy(obj, eq, path){
 				data[i].down + "元</span></p><p class = 'name'><a href='#'>" + 
 				data[i].name + "</a></p></div><div class = 'sub2'><p>财付通<span><em>" + 
 				data[i].now + "</em>元</span></p><p class = 'old'>原价：" + 
-				data[i].old + "Q币</p><a href='#' class = 'btn_buy'></a></div></li>"
+				data[i].old + "Q币</p><a href='#' class = 'btn_buy addcarbtn'  id = '" + data[i].id + "'></a></div></li>"
 				
 			}
 			obj.eq(eq).html(html);
@@ -293,7 +296,10 @@ $(function(){
 		$(this).css("display", "none");
 		});
 		
-		
+	//購物車提示框
+	$(".point a").click(function(){
+		$(".point").css("display", "none")
+	})
 		
 });
 
