@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="../css/login.css" />
+		<script type="text/javascript" src="../js/login.js"></script>
+		<script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript" src="../js/MQuery.js"></script>
+		<script type="text/javascript" src="../js/MQuery_animate.js"></script>
+		<script type="text/javascript" src="../js/perfect_startMove.js"></script>
+		<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+		<title></title>
+	</head>
+	<body>
+		<div class = "bg">
+			<div class = "container">
+				
+				<!--头部-->
+				<div class = "header">
+					<a href = "#" class = "logo" title = "QQ注册"></a>
+					<a hrf = "#" class = "feedback" target = "_blank">意见反馈</a>
+					<div class = "language">
+						<span class = "simp">简体中文</span>
+						|
+						<a href = "#" class = "Trad">繁体中文</a>
+						|
+						<a href = "#" class = "English">English</a>
+					</div>
+				</div>
+				
+				<!-- 主体内容-->
+				<div class = "content">
+					<div class = "left_box">
+						<a href = "#" class = "nav_box cur" id = "nav_1">
+							<span class = "dt nav_1">QQ账号</span>
+							<span class = "dd">由数字组成，经典通行账号</span>
+						</a>
+						<a href = "#" class = "nav_box" id = "nav_3">
+							<span class = "dt nav_3">手机账号</span>
+							<span class = "dd">便于登录，保护QQ账号</span>
+						</a>
+						<a href = "#" class = "nav_box" id = "nav_2">
+							<span class = "dt nav_2">邮箱账号</span>
+							<span class = "dd">用邮箱注册，便于记忆</span>
+						</a>
+						<div class = "search">
+							<div class = "inp_box">
+								<form>
+									<input name="number" class="txt" type="text" onfocus="this.value == 
+										'输入要查找的QQ号' && (this.value = '')" onblur="this.value == 
+										'' && (this.value = '输入要查找的QQ号')" class="put_search" value=
+										"输入要查找的QQ号" id="serch_ipt"/>
+									<input class="btn" type="submit" value=""/>
+								</form>
+								<div class = "clear"></div>
+							</div>
+							<ul>
+								<li><a href = "#" class = "item_1">生日</a></li>
+								<li><a href = "#" class = "item_2">手机</a></li>
+								<li><a href = "#" class = "item_3">爱情</a></li>
+								<li><a href = "#" class = "item_4">年度</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class = "right_box">
+						<div class = "phone">							
+						
+						</div>
+						<div class ="enter">
+							<a href = "#" class = "banner"></a>
+							<div class = "title">
+								<div class = "haoma">
+									注册账号
+								</div>
+							</div>
+							<form>
+								<div id = "Area">
+									<div class = "box box_1">
+										<span class = "item">昵称</span>
+										<div class = "inp_box">
+											<div class = "inp_bg">
+												<input type="text" class = "new_txt"/>
+											</div>
+										</div>
+										<div class = "infor">
+											<table>
+												<tr>
+													<td>昵称不能为空</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+									<div class = "box box_2">
+										<span class = "item">密码</span>
+										<div class = "inp_box">
+											<div class = "inp_bg">
+												<input type="password"/>
+											</div>
+										</div>
+										<div class = "infor pwd_infor">
+											<div class = "hide" id = "pwd_tips">
+												<div class = "yes" id = "pwd_tip1">长度为6——16个字符</div>
+												<div class = "yes" id = "pwd_tip2">不能包含空格</div>
+												<div class = "yes" id = "pwd_tip3">不能是9位以下纯数字</div>
+											</div>
+											<table>
+												<tr>
+													<td class = "rankHigh">强</td>
+												</tr>
+												<tr>
+													<td class = "password_infor">密码强度好，请记牢！</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+									<div class = "box box_3">
+										<span class = "item">确认密码</span>
+										<div class = "inp_box">
+											<div class = "inp_bg">
+												<input type="password"/>
+											</div>
+										</div>
+										<div class = "infor">
+											<table>
+												<tr>
+													<td>请再次输入密码</td>
+												</tr>
+											</table>
+										</div>
+									</div>
+									<div class = "box box_4">
+										<span class = "item">性别</span>										
+											<div class = "inp_box sex_box">
+												<a name="male" id="sex_1" class="checked" tabindex="9">男</a>
+												<a id="sex_2" class="" name="femail" tabindex="10">女</a>
+											</div>										
+										<div class = "infor">
+											<table>
+												<tr>
+													<td></td>
+												</tr>
+											</table>
+										</div>
+									</div>
+									<div class = "box box_5">
+										<span class = "item">生日</span>
+										<div class= "inp_box">
+											<div class = "type_box">
+												<select>
+													<option>公立</option>
+													<option>农立</option>
+												</select>
+											</div>
+											<div class = "year_box">
+												<select>
+													<option>2016</option>
+													<option>2015</option>
+													<option>2014</option>
+													<option>2013</option>
+													<option>2012</option>
+													<option>2011</option>
+													<option>2010</option>
+													<option>2009</option>
+													<option>2008</option>
+													<option>2007</option>
+													<option>2006</option>
+													<option>2005</option>
+													<option>2004</option>
+													<option>2003</option>
+												</select>
+											</div>
+											<div class = "month_box">
+												<select>				
+													<option>12</option>
+													<option>11</option>
+													<option>10</option>
+													<option>09</option>
+													<option>08</option>
+													<option>07</option>
+													<option>06</option>
+													<option>05</option>
+													<option>04</option>
+													<option>03</option>
+													<option>02</option>
+													<option>01</option>
+												</select>
+											</div>
+											<div class = "day_box">
+												<select>
+													<option>31</option>
+													<option>30</option>
+													<option>29</option>
+													<option>28</option>
+													<option>27</option>
+													<option>26</option>
+													<option>25</option>
+													<option>25</option>
+													<option>24</option>
+													<option>23</option>
+													<option>22</option>
+													<option>21</option>
+													<option>20</option>
+													<option>19</option>
+													<option>18</option>
+													<option>17</option>
+													<option>16</option>
+													<option>15</option>
+													<option>14</option>
+													<option>13</option>
+													<option>12</option>
+													<option>11</option>
+													<option>10</option>
+													<option>09</option>
+													<option>08</option>
+													<option>07</option>
+													<option>06</option>
+													<option>05</option>
+													<option>04</option>
+													<option>03</option>
+													<option>02</option>
+													<option>01</option>
+												</select>
+											</div>
+										</div>
+										<div class = "infor">
+											<table>
+												<tr>
+													<td></td>
+												</tr>
+											</table>
+										</div>
+									</div>
+									<div class = "box box_6">
+										<span class = "item">所在地</span>
+										<div class= "inp_box">
+											<div class = "country_box">
+												<select>
+													<option>中国</option>
+													<option>美国</option>
+													<option>日本</option>
+													<option>德国</option>
+													<option>加拿大</option>
+													<option>澳大利亚</option>
+													<option>英国</option>
+													<option>法国</option>
+													<option>荷兰</option>
+													<option>新西兰</option>
+												</select>
+											</div>
+											<div class = "province_box">
+												<select>
+													<option>北京</option>
+													<option>辽宁</option>
+													<option>河南</option>
+													<option>广东</option>
+													<option>江西</option>
+													<option>湖南</option>
+													<option>四川</option>
+													<option>贵州</option>
+													<option>宁夏</option>
+													<option>新疆</option>
+													<option>西藏</option>
+													<option>内蒙古</option>
+													<option>天津</option>
+													<option>河北</option>
+												</select>
+											</div>
+											<div class = "city_box">
+												<select>				
+													<option>沈阳</option>
+													<option>大连</option>
+													<option>哈尔滨</option>
+													<option>吉林</option>
+													<option>邯郸</option>
+													<option>石家庄</option>
+													<option>贵阳</option>
+													<option>南昌</option>
+													<option>南京</option>
+													<option>太原</option>
+													<option>青岛</option>
+													<option>武汉</option>
+												</select>
+											</div>																																		
+										</div>
+										<div class = "infor">
+											<table>
+												<tr>
+													<td></td>
+												</tr>
+											</table>
+										</div>
+									</div>
+									<div class = "phone_box">
+										<div class = "sea_phone box">
+											<span class = "item">地区</span>
+											<div class = "inp_box">
+												<div class = "sea_country_box">
+													<select>
+														<option>中国&nbsp;0086</option>
+														<option>中国香港特别行政区&nbsp;00852</option>
+														<option>中国澳门特别行政区&nbsp;00853</option>
+														<option>中国台湾&nbsp;00886</option>
+														<option>爱尔兰&nbsp;00353</option>
+														<option>冰岛&nbsp;00354</option>
+														<option>韩国&nbsp;0082</option>
+														<option>瑞士&nbsp;0041</option>
+														<option>英国&nbsp;0044</option>
+													</select>
+												</div>
+											</div>
+										</div>
+										<div class = "box box_7">
+											<span class = "item">手机号码</span>
+											<div class = "inp_box">
+												<div class = "other_box">
+													<div class = "inp_bg">
+														<input type = "text" class = "new_txt"/>
+														<a class = "phone_del hide"></a>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class = "box box_8">
+											<span class = "item"></span>
+											<div class = "tip">可通过该手机号码快速找回密码</div>
+											<br/>
+											<span class = "tip">中国大陆地区以外手机号码</span>
+											<a href = "#" onclick = "index.seaphone">点击这里</a>
+										</div>
+										<div class = "box">
+											<span class = "item"></span>
+											<div class = "inp_box">
+												<div id = "verima" class = "inp_bg">
+													<input />
+												</div>
+											</div>
+												
+										</div>
+									</div>
+									<div class = "box box_9">
+										<span class = "item"></span>
+										<div class = "inp_box">
+											<div class = "submit">
+												<input type="button" value="立即注册" title="立即注册" tabindex="23" id="submit" onclick="index.submit()" data-form-sbm="1478482289567.233">
+											</div>
+										</div>
+									</div>
+									<div class = "box box_10">
+										<span class = "item"></span>
+										<div class = "inp_box">
+											<a class="checked" name="qzone" id="qzone" tabindex="22">同时开通QQ空间</a>
+										</div>
+									</div>
+									<div class = "box box_11">
+										<span class = "item"></span>
+										<div class = "inp_box">
+											<div class = "agree_box">
+												<a name="agree" class="a_1 checked" id="agree" tabindex="22">我已阅读并同意相关服务条款和隐私政策</a>
+												<div id="x_box" class="x_box">
+													<div id="x_switcher" title="点击查看用户协议"></div>
+													<p>
+														<a id="item_1" href="agreement1_chs.html" target="_blank" title="点击查看《QQ号码规则》">《QQ号码规则》</a><br>
+														<a id="item_2" href="http://qzone.qq.com/web/tk.html" target="_blank" title="点击查看《QQ空间服务协议》" style="display: inline;">《QQ空间服务协议》</a><br>
+														<a id="item_3" href="http://www.qq.com/privacy.htm" target="_blank" title="点击查看《隐私政策》">《隐私政策》</a><br>
+													</p>
+												</div>
+											</div>
+											<div class="info"></div>
+										</div>
+									</div>
+								</div>	
+							</form>
+						</div>
+						
+					</div>
+				</div>
+				<div class="enterB" id="enterB">
+					<a id="to_good_num" title="参加免费注册靓号活动" href="/chs/new.html" onclick="$.report.monitor(&quot;l_enter_b_l_click&quot;)"></a> 
+					<a id="old_reg" title="注册普通帐号" href="javascript:void(0);"></a>
+				</div>
+			</div>
+		</div>
+		<div class = "clear_btn"></div>
+		<div class = "foot">
+			Copyright 
+			<span>©</span>
+			1998-2016 Tencent All Rights Reserved 腾讯公司 版权所有
+		</div>	
+	</body>
+</html>
+
+

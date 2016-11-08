@@ -1,0 +1,597 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="{CHARSET}">
+		<title></title>
+		<link rel="stylesheet" href="../css/detail.css" />
+		<link rel="stylesheet" href="../css/shop.css" />
+		<link rel="stylesheet" href="../css/index.css" />
+		<link rel="stylesheet" href="../css/style.css" />
+		<script type="text/javascript" src="../js/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript" src="../js/MQuery.js"></script>
+		<script type="text/javascript" src="../js/MQuery_animate.js"></script>
+		<script type="text/javascript" src="../js/perfect_startMove.js"></script>
+		<script type="text/javascript" src="../js/jquery-1.11.3.js"></script>
+		<script type="text/javascript" src="../js/index.js"></script>
+		<script type="text/javascript" src="../js/detail.js"></script>
+	</head>
+
+	<body>
+		<!--头部-->
+		<div class="top">
+			<div class="top_login">
+				<div class="top_game">
+					<a href="#" class="tx_game"></a>
+
+					<!--腾讯游戏-->
+					<div class="box">
+						<div class="boxtop spr"><span class="spr" style="width:718px"></span></div>
+						<div class="boxmain spr">
+							<div class="inner spr">
+								<div class="lst mmo">
+									<h2 class="name spr">
+										角色扮演<span class="amount">(20)</span>
+									</h2>
+									<div class="lst" id="people">
+
+									</div>
+								</div>
+								<div class="lst ath">
+									<h2 class="name spr">
+										竞技游戏<span class="amount">(10)</span>
+									</h2>
+									<div class="lst" id="athle">
+
+									</div>
+								</div>
+								<div class="lst">
+									<h2 class="name spr">
+										休闲游戏<span class="amount">(4)</span>
+									</h2>
+									<div class="lst" id="relaxa">
+
+									</div>
+								</div>
+								<div class="lst">
+									<h2 class="name spr">
+										网页游戏<span class="amount">(6)</span>
+									</h2>
+									<div class="lst" id="webpage">
+
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="top_link">
+					<ul class="c">
+						<li class="li_top">
+							<a href="http://t.qq.com/daojucheng" class="icon_weibo" target="_blank" title="官方微博">官方微博</a>
+						</li>
+						<li>
+							<a href="http://daoju.gamebbs.qq.com/forum.php" target="_blank" title="商城论坛">商城论坛</a>
+						</li>
+						<li>
+							<a href="http://pay.qq.com" target="_blank" title="">Q币充值</a>
+						</li>
+						<li class="lost">
+							<a href="http://daoju.qq.com/act/djc/a20140910app/index.htm" target="_blank" title="" class="djm">
+								<p class="djmobile">
+								</p>手机版<span class="djcode">
+								
+							</span>
+							</a>
+						</li>
+					</ul>
+					<div id="code">
+						<img src="../images/700.jpg">
+					</div>
+				</div>
+				<div id="unlogin">
+					亲您还未登录，请
+					<a href="#">登录</a>
+				</div>
+			</div>
+			<div class="top_search">
+				<div class="top_div">
+					<a href="#" class="btn_search" title="点击搜索">
+					</a>
+					<input type="text" onfocus="this.value == '输入道具进行搜索' && (this.value = '')" onblur="this.value == '' && (this.value = '输入道具进行搜索')" class="put_search" value="输入道具进行搜索" />
+				</div>
+			</div>
+			<a href="http://daoju.qq.com/lol/" target="_blank" title="道具城" class="top_logo"><img src="../images/logo.png" />
+			</a>
+			<img src="../images/iloi.jpg" class="top_img" />
+		</div>
+		<div class="banner" id="ban_box">
+
+			<div class="banner_nav">
+				<div class="box1">
+					<h2>全部分类</h2>
+					<!--全部菜单-->
+					<div id="sider" class="actives">
+						<ul>
+							<li class="box">
+								<a class="box_a">英雄(133)</a>
+								<div class="i_list">
+									<div class="list_left">
+										<ul>
+											<li>
+												<span><a href = "#">刺客</a></span>
+												<span><a href = "#">战士</a></span>
+												<span><a href = "#">射手</a></span>
+												<span><a href = "#">法师</a></span>
+												<span><a href = "#">辅助</a></span>
+												<span><a href = "#">后期</a></span>
+												<span><a href = "#">推进</a></span>
+												<span><a href = "#">新手</a></span>
+												<span><a href = "#" class = "none">潜行</a></span>
+											</li>
+										</ul>
+									</div>
+									<div class="exp">
+										<h4>英雄</h4>
+										<ul>
+											<li>共有道具 133 个</li>
+											<li>可以点击左侧标签进行类别查询</li>
+										</ul>
+									</div>
+								</div>
+								<em></em>
+							</li>
+							<li class="box">
+								<a class="box_a">皮肤(508)</a>
+								<div class="i_list">
+									<div class="list_left">
+										<ul>
+											<li>
+												<span><a href = "#">史诗</a></span>
+												<span><a href = "#">传说</a></span>
+												<span><a href = "#">王者</a></span>
+												<span><a href = "#">勇士</a></span>
+												<span><a href = "#" class = "none">限定</a></span>
+											</li>
+										</ul>
+									</div>
+									<div class="exp">
+										<h4>皮肤</h4>
+										<ul>
+											<li>共有道具508 个</li>
+											<li>可以点击左侧标签进行类别查询</li>
+										</ul>
+									</div>
+								</div>
+								<em></em>
+							</li>
+							<li class="box">
+								<a class="box_a">道具(28)</a>
+								<div class="i_list">
+									<div class="list_left">
+										<ul>
+											<li>
+												<span><a href = "#" class = "none">头像</a></span>
+											</li>
+										</ul>
+									</div>
+									<div class="exp">
+										<h4>道具</h4>
+										<ul>
+											<li>共有道具 28 个</li>
+											<li>可以点击左侧标签进行类别查询</li>
+										</ul>
+									</div>
+								</div>
+								<em></em>
+							</li>
+							<li class="box special">
+								<a href="#" class="box_a">限定皮肤(28)</a>
+							</li>
+							<li class="box special">
+								<a href="#" class="box_a">守卫眼皮肤(14)</a>
+							</li>
+							<li class="box special">
+								<a href="#" class="box_a">道具包(31)</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="box2">
+					<ul>
+						<li class="">
+							<a href="#">首页</a><span></span></li>
+						<li class="">
+							<a href="#">商品列表</a><span></span></li>
+						<li class="">
+							<a href="#">活动专区</a><span></span></li>
+						<li class="">
+							<a href="#">个人中心</a><span></span></li>
+					</ul>
+					<div class="car">
+						<a href="#">
+							<span class="car_bg"></span>
+							<span>
+							我的购物车
+							<strong class = "num">0</strong>
+						</span>
+						</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="location_box">您现在的位置：
+			<a href="#">英雄联盟</a>>
+			<a href="#">全部商品</a>>
+			<a href="#">英雄</a>
+		</div>
+
+		<!--主体内容-->
+		<div class="content" id="cont">
+			<div class="con_main" id="shop_main">
+				<div class="bar_left">
+
+					<!--热门排行-->
+					<div class="hot_pro">
+						<div class="like_title">
+							<h2 class="like_txt">看了该商品的用户还看了</h2>
+						</div>
+						<ul class="viewbuy_box">
+
+						</ul>
+						<div class="like_title">
+							<h2 class="like_txt">购买了该商品的用户还买了</h2>
+						</div>
+						<ul class="viewbuy_box">
+
+						</ul>
+					</div>
+					<div class="title-box">
+						<h2 class="title-txt">最近浏览过的商品</h2>
+						<a href="javascript:void(0)" class="clear_history">清除浏览历史</a>
+					</div>
+				</div>
+				<div class="bar_right">
+					<div class="goods_img">
+						<div class="goods_img_bg pr" id = "small" alt="熔岩巨兽" >
+							<div href="#big_img" style="cursor:pointer;" class="btn_goods_zoom" title="查看大图"></div>
+							<div id="mask"></div>
+							<img src="../images/1_54.jpg" id="smallpic"/>
+							<div id="orgin">
+								<img src="../images/1_542.jpg" />
+								<div id="img_btn">×</div>
+							</div>
+							<div id="big">
+							  	<img src="../images/1_542.jpg" id="bigpic"/>
+							</div>
+						</div>
+						<ul>
+							<li>
+								<a href="javascript:shareWb(1396);" class="btn_goods_share" title="微博分享">微博分享</a>
+							</li>
+							<li>
+								<a href="#" seq="1396" sgoodsname="灌篮高手 德莱厄斯 篮球王朝礼包" url="1396.shtml" piclink="http://ossweb-img.qq.com/images/gameshop/lol/images/thumb/package_2bcd22e30850461fdaa1ee58521ac051.jpg" class="btn_goods_fav collect_btn" title="关注商品">关注商品</a>
+							</li>
+						</ul>
+					</div>
+					<div class="goodsbuy_box">
+						<h2 class="goods_name" style="float: left;">熔岩巨兽</h2>
+						<dl>
+							<dt>原&nbsp;&nbsp;&nbsp;&nbsp;价：</dt>
+							<dd class="txt_line">
+								<span>147.75</span>
+								<span>&nbsp;Q币</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>Q&nbsp;币&nbsp;价：</dt>
+							<dd class="l">
+								<em id="tag_status" style="display:none"></em>
+								<span class="goods_price">147.75</span>
+								<span class=" font_red_b font_s14">Q币</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt class="online_price">财付通价：</dt>
+							<dd>
+								<span class="goods_price">¥140.36</span>
+							</dd>
+						</dl>
+						<dl>
+							<dt>数量：</dt>
+							<dd>
+								<div class="goods_amount l">
+									<a href="javascript:void(0);" id="minus_num" iseqid="1396" class="goods_minus ht">减</a>
+									<input name="buy_num" id="buy_num" max_num="1" type="text" value="1">
+									<a href="javascript:void(0);" id="plus_num" iseqid="1396" class="goods_plus ht">加</a>
+								</div>件
+							</dd>
+						</dl>
+						<dl>
+							<dt>是否支持购物点购买：</dt>
+							<dd>否</dd>
+						</dl>
+						<dl>
+							<dt>是否返还购物点：</dt>
+							<dd>否</dd>
+						</dl>
+						<dl id="award_dl" style="display:none">
+							<dt>购买该道具赠送：</dt>
+							<dd>
+								<em>赠</em>
+								<span id="award_txt"></span>
+							</dd>
+						</dl>
+						<span id="limit_wrap" style="display:none"></span>
+						<span id="buy_btns" style="">
+						<a href="javascript:buyGood(1396);" id="addCartBtn" class="btn_goods_cart ht clear l" title="加入购物车">加入购物车</a>
+						<a href="javascript:showSendBox(1396);" id="sendBtn" class="btn_goods_handsel ht l" title="赠送">赠送</a>
+						</span>
+					</div>
+					<div class="goods_info_box l clear">
+						<div class="info_nav">
+							<a href="javascript:;" class="focus" id="goods_nav_0">商品介绍</a>
+							<a style="display:none" href="#" id="goods_nav_1">购买记录</a>
+						</div>
+						<div id="good_desc" class="goods_tab_0 clear">
+							<p> <strong>视频：</strong></p>
+							<p> <embed src="#" type="application/x-shockwave-flash" width="550" height="400" autostart="false" loop="true"></p>
+							<p> <br></p>
+							<p> <strong>技能介绍：</strong></p>
+							<p> <br></p>
+							<p> </p>
+							<p> </p>
+							<ul>
+								<li> <img alt="" title="" src="../images/995.jpg">
+									<div>
+										<h4>						地震碎片[ Q ]					</h4>
+										<p> 对目标造成70 / 120 / 170 / 220 / 270 (+法术伤害*0.6)点魔法伤害，并偷取其14 / 17 / 20 / 23 / 26%的移动速度，持续5秒。 </p>
+									</div>
+									<div>
+										<p> 冷却时间：8 秒 </p>
+										<p> 施法消耗：70/ 75 / 80 / 85 / 90 点魔法值 </p>
+									</div>
+								</li>
+								<li> <br> </li>
+							</ul>
+							<p></p>
+							<p> </p>
+							<ul>
+								<li> <img alt="" title="" src="../images/0202.jpg">
+									<div>
+										<h4>						野蛮打击[ W ]					</h4>
+										<p> 被动效果：墨菲特的普通攻击也会对目标周围的单位造成30 / 38 / 46 / 54 / 62 % 的伤害。主动效果：墨菲特的攻击力和护甲提升20 / 25 / 30 / 35 / 40%，持续5秒。 </p>
+									</div>
+									<div>
+										<p> 冷却时间：14 秒 </p>
+										<p> 施法消耗：50 / 55 / 60 / 65 / 70 点魔法值 </p>
+									</div>
+								</li>
+								<li> <br> </li>
+							</ul>
+							<p></p>
+							<p> </p>
+							<ul>
+								<li> <img alt="" title="" src="../imagaes/5932.jpg">
+									<div>
+										<h4>						大地震颤[ E ]					</h4>
+										<p> 墨菲特猛击地面，对周围的敌人造成 60 / 100 / 140 / 180 / 220 （+护甲值的30% +0.2法术加成）的魔法伤害，并减少他们30 / 35 / 40 / 45 / 50%的攻击速度，持续3秒。 </p>
+									</div>
+									<div>
+										<p> 冷却时间：7 秒 </p>
+										<p> 施法消耗：50 / 55 / 60 / 65 / 70 点魔法值 </p>
+									</div>
+								</li>
+								<li> <br> </li>
+							</ul>
+							<p></p>
+							<p> </p>
+							<ul>
+								<li> <img alt="" title="" src="../images/71492.jpg">
+									<div>
+										<h4>						势不可挡[ R ]					</h4>
+										<p> 墨菲特冲入目标区域, 造成200 / 300 / 400 (+法术伤害*1)点魔法伤害并将区域内的敌人击飞1.5秒。 </p>
+									</div>
+									<div>
+										<p> 冷却时间：130 / 115 / 100 秒 </p>
+										<p> 施法消耗：100 / 100 / 100 点魔法值 </p>
+									</div>
+								</li>
+								<li> <br> </li>
+							</ul>
+							<p></p>
+							<div>
+								<ul>
+									<li> <img alt="" title="" src="../images/28902.png">
+										<div>
+											<h4>						花岗岩护盾[ 被动 ]					</h4>
+											<p> 墨菲特拥有岩石护盾保护自己，吸收最大生命值10%的伤害；10秒内未受到伤害时护盾重置 </p>
+										</div>
+									</li>
+								</ul>
+							</div>
+							<p></p>
+						</div>
+					</div>
+
+					<div class="like_box">
+						<div class="like_title">
+							<h2 class="like_txt">猜你喜欢（根据浏览行为推荐）</h2>
+						</div>
+						<ul>
+							<li pos="41">
+								<a target="_blank" href="/lol/item/601.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11043.1001.0"><img width="80" height="80" alt="无双剑姬" src="../images/champions_114.png">
+								</a>
+								<p>
+									<a target="_blank" href="/lol/item/601.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11043.1001.0">
+										<em>无双剑姬</em>
+									</a>
+								</p>
+								<p>Q币：<span class="font_red">45.00Q币</span></p>
+								<p>财付通：
+									<span class="font_red">¥42.75</span>
+								</p>
+							</li>
+							<li pos="41">
+								<a target="_blank" href="/lol/item/768.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11043.1001.0">
+									<img width="80" height="80" alt="苍穹之光 韦鲁斯" src="../images/110002.png">
+								</a>
+								<p>
+									<a target="_blank" href="/lol/item/768.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11043.1001.0">
+										<em>苍穹之光 韦鲁斯</em>
+									</a>
+								</p>
+								<p>Q币：
+									<span class="font_red">99.00Q币</span>
+								</p>
+								<p>财付通：
+									<span class="font_red">¥94.05</span>
+								</p>
+							</li>
+							<li pos="41">
+								<a target="_blank" href="/lol/item/620.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11043.1001.0">
+									<img width="80" height="80" alt="夜魔水晶 韦鲁斯" src="../images/110001.png">
+								</a>
+								<p>
+									<a target="_blank" href="/lol/item/620.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11043.1001.0">
+										<em>夜魔水晶 韦鲁斯</em>
+									</a>
+								</p>
+								<p>Q币：
+									<span class="font_red">45.00Q币</span>
+								</p>
+								<p>财付通：
+									<span class="font_red">¥42.75</span>
+								</p>
+							</li>
+							<li pos="41">
+								<a target="_blank" href="/lol/item/1098.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11043.1001.0"><img width="80" height="80" alt="韦鲁斯·迅箭" src="../images/2_110005.jpg">
+								</a>
+								<p>
+									<a target="_blank" href="/lol/item/1098.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11043.1001.0">
+										<em>韦鲁斯·迅箭</em>
+									</a>
+								</p>
+								<p>Q币：
+									<span class="font_red">49.00Q币</span>
+								</p>
+								<p>财付通：
+									<span class="font_red">¥46.55
+									</span>
+								</p>
+							</li>
+							<li pos="41">
+								<a target="_blank" href="/lol/item/619.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11043.1001.0"><img width="80" height="80" alt="惩戒之箭" src="../images/champions_110.png">
+								</a>
+								<p>
+									<a target="_blank" href="/lol/item/619.shtml?ADTAG=media.free.recommend.LOL&amp;algorithm=11043.1001.0">
+										<em>惩戒之箭</em>
+									</a>
+								</p>
+								<p>Q币：
+									<span class="font_red">35.00Q币</span>
+								</p>
+								<p>财付通：
+									<span class="font_red">¥33.25
+									</span>
+								</p>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+
+		</div>
+
+		<!--服务内容-->
+		<div class="infor">
+			<div class="infor_box">
+				<div class="box_t1">
+					<h2 class="h2_01">新手上路</h2>
+					<ul>
+						<li>
+							<a href="#">什么是道具城</a>
+						</li>
+						<li>
+							<a href="#">如何购买</a>
+						</li>
+						<li>
+							<a href="#">如何赠送</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box_t1">
+					<h2 class="h2_02">常见问题</h2>
+					<ul>
+						<li>
+							<a href="#">发货时间</a>
+						</li>
+						<li>
+							<a href="#">如何领取</a>
+						</li>
+						<li>
+							<a href="#">补发规则</a>
+						</li>
+						<li>
+							<a href="#">vip价定义</a>
+						</li>
+						<li>
+							<a href="#">道具状态定义</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box_t1">
+					<h2 class="h2_03">支付方式</h2>
+					<ul>
+						<li>
+							<a href="#">支付方式</a>
+						</li>
+						<li>
+							<a href="#">购物点支付</a>
+						</li>
+						<li>
+							<a href="#">如何充值</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box_ser">
+					<a href="#"></a>
+				</div>
+			</div>
+		</div>
+
+		<!--底部-->
+		<div class="buttom">
+			<div class="ide">
+				<p>
+					<a href="http://ieg.tencent.com" target="_blank">腾讯互动娱乐</a>
+					<a href="http://http://game.qq.com/contract.shtml" target="_blank">服务条款</a>
+					<a href="http://adver.qq.com/" target="_blank">广告服务</a>
+					<a href="http://game.qq.com/hr/" target="_blank">腾讯游戏招聘</a>
+					<a href="http://sevice.qq.com/" target="_blank">腾讯游戏客服</a>
+					<a href="http://game.qq.com/gnav" target="_blank">游戏地图</a>
+					<a href="http://tgact.qq.com/" target="_blank">游戏活动</a>
+					<a href="http://game.qq.com/brand/business.htm" target="_blank">商务合作</a>
+					<a href="http://www.qq.com/map/" target="_blank">网站导航</a>
+				</p>
+				<p>COPYRIGHT © 1998 – 2016 TENCENT. ALL RIGHTS RESERVED.</p>
+				<p>腾讯公司&nbsp;&nbsp;版权所有</p>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function() {
+			ajaxList($(".hot_pro").find("ul"), 0, "../../codes/json/detail.json");
+			ajaxList($(".hot_pro").find("ul"), 1, "../../codes/json/detail.json");
+			ajaxGoods($(".con"), 0, "../../codes/json/datass.json");
+			ajaxGoods($(".con"), 1, "../../codes/json/prodact1.json");
+			ajaxHot($(".con_hot").find("ul"), 0, "../../codes/json/hot1.json");
+			ajaxBuy($(".buy").find("ul"), 0, "../../codes/json/buy.json");
+			ajaxGame($(".top").find(".box").find(".inner").find("#people"), 0, "../../codes/json/game1.json");
+			ajaxGame($(".top").find(".box").find(".inner").find("#athle"), 0, "../../codes/json/game2.json");
+			ajaxGame($(".top").find(".box").find(".inner").find("#relaxa"), 0, "../../codes/json/game3.json");
+			ajaxGame($(".top").find(".box").find(".inner").find("#webpage"), 0, "../../codes/json/game4.json");
+		});
+	</script>
+
+</html>

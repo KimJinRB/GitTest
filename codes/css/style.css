@@ -1,0 +1,683 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	font-size: 12px;
+}
+
+html,
+dody {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+
+
+/*头部LOGO搜索窗口等*/
+
+.top,
+.banner,
+.content,
+.infor,
+.buttom {
+	width: 1000px;
+	margin: 0 auto;
+}
+
+.top {
+	position: relative;
+}
+
+.top_login {
+	width: 1000px;
+	height: 28px;
+	padding-top: 10px;
+}
+
+.top .top_logo {
+	width: 360px;
+	height: 66px;
+	position: absolute;
+	top: 12px;
+	left: 22px;
+}
+
+.top .top_img {
+	width: 100%;
+	height: 76px;
+	display: block;
+}
+
+.top .top_login .top_link {
+	float: right;
+	width: 283px;
+	height: 28px;
+	padding-left: 5px;
+}
+
+.top .top_login .top_link li {
+	float: left;
+	line-height: 18px;
+	height: 18px;
+	border-right: 1px dotted;
+}
+
+.top .top_login .top_link #code {
+	display: none;
+	width: 132px;
+	height: 132px;
+	position: absolute;
+	left: 820px;
+	top: 40px;
+	z-index: 10;
+}
+
+.top .top_login .top_link .lost {
+	border: none;
+}
+
+.top .top_login .top_link .djmobile {
+	width: 11px;
+	height: 16px;
+	float: left;
+	margin: 2px -4px 0 8px;
+	background: url(../images/icong.png) no-repeat;
+	background-position: 0 0;
+}
+
+.top .top_login .top_link li .icon_weibo {
+	padding: 0 0 2px 24px;
+	background: url(../images/top.jpg) no-repeat;
+	background-position: -100px -42px;
+}
+
+.top .top_login .top_link li a {
+	margin: 0 8px;
+	color: #325E7F;
+}
+
+.top .top_login #unlogin {
+	float: right;
+	height: 18px;
+	line-height: 18px;
+}
+
+.top .top_login #unlogin a {
+	color: #325E7F;
+}
+
+.top .top_login #unlogin a:hover{
+	color:#f00;
+}
+
+.top .top_login .top_game {
+	padding-left: 16px;
+	float: right;
+	position: relative;
+}
+
+.top .top_login .top_game .tx_game {
+	width: 97px;
+	height: 20px;
+	font-size: 14px;
+	color: #fff;
+	display: block;
+	background: url(../images/top.jpg) no-repeat;
+	background-position: 0 -59px;
+}
+
+
+/*游戏标签*/
+
+.top .top_game .spr {
+	background: url(../images/gamearea.png) no-repeat;
+}
+
+.top .top_game .box {
+	width: 727px;
+	height: 252px;
+	z-index: 999;
+	position: absolute;
+	top: 20px;
+	right: 0px;
+	background-color: #fff;
+	overflow: hidden;
+	display: none;
+	padding-top: 10px;
+}
+
+.top .top_game .inner {
+	width: 100%;
+}
+
+.top .top_game .boxtop {
+	display: inline-block;
+	height: 11px;
+	overflow: hidden;
+	background-position: 0 0;
+	padding-left: 7px;
+}
+
+.top .top_game .boxtop span {
+	width: 613px;
+	display: inline-block;
+	height: 11px;
+	overflow: hidden;
+	background-position: 100% 0;
+}
+
+.top .top_game .boxmain {
+	float: left;
+	background-position: 0 bottom;
+	padding-left: 8px;
+	margin-top: -3px;
+}
+
+.top .top_game .inner {
+	float: left;
+	background-position: 100% bottom;
+	overflow: hidden;
+	padding: 0 4px 7px 0;
+	_zoom: 1;
+	_padding-right: 9px;
+}
+
+.top .top_game .lst {
+	width: 102px;
+	float: left;
+	margin: 0 -1px 0 0;
+}
+
+.top .top_game .mmo {
+	width: 304px;
+}
+
+.top .top_game .ath {
+	width: 203px;
+}
+
+.top .top_game .name {
+	height: 33px;
+	line-height: 33px;
+	background-position: 0 -13px;
+	font-size: 12px;
+	color: #0096D0;
+	text-indent: 8px;
+	border: 1px solid #d6d6d6;
+	border-top: none;
+	border-left: none
+}
+
+.top .top_game .amount {
+	font-size: 9px;
+	color: #BBBFCB;
+	padding: 0 5px
+}
+
+.top .top_game .lnk {
+	display: block;
+	width: 85px;
+	height: 27px;
+	padding: 0 8px;
+	line-height: 27px;
+	background-position: 0 -19px;
+	color: #464646;
+	text-decoration: none;
+	border: 1px solid #d6d6d6;
+	border-top: none;
+	border-left: none;
+	overflow: hidden;
+	float: left;
+	margin-right: -1px;
+}
+
+.top .top_game #people{
+	height: 196px;
+	width: 304px;
+	border-right: 1px solid #d6d6d6;
+}
+
+.top .top_game #athle{
+	height: 196px;
+	width: 203px;
+	border-right: 1px solid #d6d6d6;
+}
+
+.top .top_game #relaxa{
+	height: 196px;
+	width: 102px;
+	border-right: 1px solid #d6d6d6;
+}
+
+.top .top_game #webpage{
+	height: 196px;
+	width: 102px;
+}
+
+.top .top_game .lnk:hover {
+	color: #0896D4
+}
+
+.top .top_game .ico {
+	display: block;
+	width: 10px;
+	height: 27px;
+	overflow: hidden;
+	text-indent: 500px;
+	float: right
+}
+
+.top .top_game .hot {
+	background-position: 0 -47px
+}
+
+.top .top_game .new {
+	background-position: 0 -127px
+}
+
+.top .top_game .more {
+	background-position: 0 -164px;
+	float: left
+}
+
+.top .top_game .game_pop {
+	width: 622px
+}
+
+
+/*搜索框*/
+
+.top_search {
+	padding-top: 6px;
+	width: 100%;
+	height: 44px;
+}
+
+.top_search .top_div {
+	width: 294px;
+	height: 33px;
+	float: right;
+}
+
+.top_search .put_search {
+	width: 190px;
+	height: 22px;
+	line-height: 26px;
+	margin: 1px;
+	display: block;
+	float: left;
+	color: #AAA8A8;
+}
+
+.top_search .put_search:hover{
+	color: #000;
+}
+
+.top_search .btn_search {
+	width: 80px;
+	height: 22px;
+	display: block;
+	float: right;
+	margin-top: 3px;
+	background: url(../images/commen.png) no-repeat;
+	background-position: -83px 0;
+}
+
+
+/*全部菜单*/
+
+.banner .banner_nav #clear {
+	clear: both;
+}
+
+.banner .banner_nav .box1 #sider {
+	background-color: white;
+	width: 208px;
+	position: absolute;
+	z-index: 21;
+	top: 39px;
+	border: 2px solid red;
+}
+
+.banner .banner_nav .box1 .actives {
+	display: none;
+}
+
+.banner .banner_nav .box1 #sider ul .box {
+	width: 195px;
+	height: 34px;
+	position: relative;
+	line-height: 34px;
+	list-style: square inside;
+	color: red;
+	padding-left: 15PX;
+	border-bottom: 1px dotted #b7b7b7;
+}
+
+.banner .banner_nav .box1 #sider ul .box:hover{
+	border-bottom: 1px solid red;
+	border-top: 1px solid red;
+	margin-top: -1px;
+	background-color: #FFF9EF;
+}
+
+.banner .banner_nav .box1 #sider ul .special:hover{
+	border-right: 2px solid red;
+	width: 193px;
+}
+
+.banner .banner_nav .box1 #sider ul li .box_a {
+	color: black;
+	width: 100%;
+	display: block;
+}
+
+.banner .banner_nav .box1 #sider ul li .box_a:hover{
+	color: red;
+}
+
+.banner .banner_nav .box1 #sider ul li em {
+	display: block;
+	position: absolute;
+	top: 12px;
+	left: 180px;
+	width: 6px;
+	height: 9px;
+	z-index: 24;
+	background: url(../images/comm_ico.png) no-repeat;
+	background-position: -6px -1115px;
+}
+
+
+/*二级菜单*/
+
+.banner .banner_nav .box1 #sider .i_list {
+	position: absolute;
+	top: -20px;
+	left: 209px;
+	width: 660px;
+	padding-bottom: 20px;
+	z-index: 22;
+	border: 1px solid #c30;
+	border-left: none;
+	overflow: hidden;
+	background: url(../images/side_bg.jpg)repeat-y -10px 0;
+	display: none;
+	
+}
+
+.banner .banner_nav .box1 #sider .i_list .exp {
+	width: 210px;
+	float: right;
+	display: block;	
+}
+
+.banner .banner_nav .box1 #sider .i_list .exp h4 {
+	padding-left: 15px;
+	color: #de1407;
+}
+
+.banner .banner_nav .box1 #sider .i_list .exp li {
+	color: #de1407;
+	margin-bottom: 5px;
+	font-size: 12px;
+	list-style: square inside;
+}
+
+.banner .banner_nav .box1 #sider .i_list .list_left {
+	width: 385px;
+	float: left;
+	padding-left: 20px;
+}
+
+.banner .banner_nav .box1 #sider .i_list .list_left ul li {
+	float: left;
+	width: 335px;
+	margin-left: 5px;
+	padding: 10px 10px 10px 40px;
+	border-bottom: 1px dotted #bfbfbf;
+	display: inline;
+	position: relative;
+	line-height: 2;
+	white-space: nowrap;
+}
+
+.banner .banner_nav .box1 #sider .i_list .list_left ul li span {
+	float: left;
+	color: #bbbbbb;
+	padding: 0 10px;
+	border-right: 1px solid #b7b7b7;
+	margin-bottom: 10px;
+	line-height: 12px;
+}
+
+.banner .banner_nav .box1 #sider ul li .i_list .list_left ul li a {
+	font-size: 12px;	
+	color: #535353;	
+}
+
+.banner .banner_nav .box1 #sider ul li .i_list .list_left ul li a:hover{
+	color: red;
+	border-bottom: 2px solid red;
+}
+
+.banner .banner_nav .box1 #sider ul li .i_list .list_left ul li .none {
+	border: none;
+}
+
+.banner {	
+	height: 360px;	
+}
+
+.banner .banner_nav {
+	height: 39px;
+	/*overflow: hidden;*/
+}
+
+.banner .banner_nav .box1 {
+	float: left;
+	position: relative;
+}
+
+.banner .banner_nav .box1 h2 {
+	width: 204px;
+	height: 39px;
+	font-size: 14px;
+	font-weight: bold;
+	background: url(../images/comm_bg.png) no-repeat;
+	background-position: -340px -181px;
+	padding-left: 10px;
+	color: #fff;
+	line-height: 39px;
+	cursor: pointer;
+}
+
+.banner .banner_nav .box2 {
+	width: 786px;
+	height: 39px;
+	float: right;
+	line-height: 39px;
+	background: url(../images/comm_bg.png) no-repeat;
+}
+
+.banner .banner_nav .box2 ul {
+	float: left;
+}
+
+.banner .banner_nav .box2 li {
+	float: left;
+}
+
+.banner .banner_nav .box2 li a {
+	width: 96px;
+	height: 39px;
+	text-align: center;
+	line-height: 39px;
+	display: block;
+	font-size: 14px;
+	color: #fef4f4;
+	font-weight: bold;
+	float: left;
+}
+
+.banner .banner_nav .box2 li span {
+	width: 2px;
+	height: 39px;
+	float: left;
+	background: url(../images/comm_bg.png) no-repeat;
+	background-position: -561px -181px;
+}
+
+.banner .banner_nav .box2 .change a {
+	background: url(../images/comm_bg.png) no-repeat;
+	background-position: -570px -181px;
+}
+
+.banner .banner_nav .car {
+	float: right;
+}
+
+.banner .banner_nav .car a {
+	width: 120px;
+	height: 39px;
+	line-height: 39px;
+	padding: 0 20px;
+	display: block;
+	background: url(../images/comm_bg.png) no-repeat 0 -244px;
+}
+
+.banner .banner_nav .car a span {
+	font-size: 14px;
+	text-align: center;
+	line-height: 39px;
+	height: 39px;
+	float: left;
+	color: #fef4f4;
+}
+
+.banner .banner_nav .car a .car_bg {
+	width: 14px;
+	height: 30px;
+	display: block;
+	margin-right: 6px;
+	background: url(../images/comm_bg.png) no-repeat;
+	background-position: -210px -244px;
+}
+
+.banner .banner_con {
+	overflow: hidden;
+}
+
+
+/*联系方式及信息*/
+
+.infor {
+	padding-top: 30px;
+}
+
+.infor .infor_box {
+	overflow: hidden;
+	padding: 16px 30px;
+	border: 1px solid #cfcfcf;
+	background: url(../images/bg1.png) no-repeat 100% 100%;
+}
+
+.infor .infor_box .box_ser {
+	width: 235px;
+	height: 100px;
+	position: relative;
+	float: left;
+}
+
+.infor .infor_box .box_ser a {
+	position: absolute;
+	top: 7px;
+	left: 49px;
+	width: 180px;
+	height: 40px;
+	display: block;
+}
+
+.infor .infor_box .box_t1 {
+	width: 230px;
+	float: left;
+	color: #505050;
+}
+
+.infor .infor_box .box_t1 h2 {
+	height: 34px;
+	line-height: 34px;
+	font-size: 18px;
+	padding-left: 32px;
+	color: #626262;
+	font-family: Microsoft YaHei;
+}
+
+.infor .infor_box .box_t1 ul {
+	margin-top: 6px;
+	display: block;
+	overflow: hidden;
+}
+
+.infor .infor_box .box_t1 .h2_02 {
+	background: url(../images/icon.png) no-repeat;
+	background-position: 0 -394px;
+}
+
+.infor .infor_box .box_t1 .h2_01 {
+	background: url(../images/icon.png) no-repeat;
+	background-position: 0 -346px;
+}
+
+.infor .infor_box .box_t1 .h2_03 {
+	background: url(../images/icon.png) no-repeat;
+	background-position: 0 -445px;
+}
+
+.infor .infor_box .box_t1 ul li {
+	float: left;
+	width: 92px;
+	height: 26px;
+	overflow: hidden;
+	display: block;
+}
+
+.infor .infor_box .box_t1 ul li a {
+	width: 83px;
+	height: 22px;
+	display: block;
+	line-height: 22px;
+	font-size: 12px;
+	color: #5a5a5a;
+	overflow: hidden;
+	text-align: center;
+	background: url(../images/commen.png) no-repeat;
+	background-position: 0 0;
+}
+
+
+/* 底部*/
+
+.buttom {
+	padding: 10px 0 60px 0;
+	margin-top: 16px;
+	border-top: 5px solid #de0707;
+}
+
+.buttom .ide p {
+	color: #000;
+	line-height: 19px;
+	font-family: Tahoma;
+	text-align: center;
+	font-size: 12px;
+}
+
+.buttom .ide p a {
+	color: #000;
+	line-height: 19px;
+	font-family: Tahoma;
+	text-align: center;
+	font-size: 12px;
+}
+

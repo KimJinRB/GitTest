@@ -1,0 +1,483 @@
+<!doctype html>
+<html>
+
+	<head>
+		<title></title>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="css/index.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<script type="text/javascript" src="js/jquery-1.10.1.min.js"></script>
+		<script type="text/javascript" src="js/MQuery.js"></script>
+		<script type="text/javascript" src="js/MQuery_animate.js"></script>
+		<script type="text/javascript" src="js/perfect_startMove.js"></script>
+		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+	</head>
+
+	<body>
+		<!--头部-->
+		<div class="top">
+			<div class="top_login">
+				<div class="top_game">
+					<a href="#" class="tx_game"></a>
+					
+					<!--腾讯游戏-->
+					<div class="box">
+						<div class="boxtop spr"><span class="spr" style="width:718px"></span></div>
+						<div class="boxmain spr">
+							<div class="inner spr">
+								<div class="lst mmo">
+									<h2 class="name spr">
+										角色扮演<span class="amount">(20)</span>
+									</h2>
+									<div class="lst" id = "people">
+									
+									</div>
+								</div>
+								<div class="lst ath">
+									<h2 class="name spr">
+										竞技游戏<span class="amount">(10)</span>
+									</h2>
+									<div class="lst" id = "athle">
+										
+									</div>
+								</div>
+								<div class="lst">
+									<h2 class="name spr">
+										休闲游戏<span class="amount">(4)</span>
+									</h2>
+									<div class="lst"  id = "relaxa">
+										
+									</div>
+								</div>
+								<div class="lst">
+									<h2 class="name spr">
+										网页游戏<span class="amount">(6)</span>
+									</h2>
+									<div class="lst" id = "webpage">
+										
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="top_link">
+					<ul class="c">
+						<li class="li_top">
+							<a href="http://t.qq.com/daojucheng" class="icon_weibo" target="_blank" title="官方微博">官方微博</a>
+						</li>
+						<li>
+							<a href="http://daoju.gamebbs.qq.com/forum.php" target="_blank" title="商城论坛">商城论坛</a>
+						</li>
+						<li>
+							<a href="http://pay.qq.com" target="_blank" title="">Q币充值</a>
+						</li>
+						<li class="lost">
+							<a href="http://daoju.qq.com/act/djc/a20140910app/index.htm" target="_blank" title="" class="djm">
+								<p class="djmobile">
+								</p>手机版<span class="djcode">
+								
+							</span>
+							</a>
+						</li>
+					</ul>
+					<div id="code">
+						<img src="images/700.jpg">
+					</div>
+				</div>
+				<div id="unlogin">
+					亲您还未登录，请
+					<a href="#">登录</a>
+				</div>
+			</div>
+			<div class="top_search">
+				<div class="top_div">
+					<a href="#" class="btn_search" title="点击搜索">
+					</a>
+					<input type="text" onfocus="this.value == '输入道具进行搜索' && (this.value = '')" onblur="this.value == '' && (this.value = '输入道具进行搜索')" class="put_search" value="输入道具进行搜索" />
+				</div>
+			</div>
+			<a href="http://daoju.qq.com/lol/" target="_blank" title="道具城" class="top_logo"><img src="images/logo.png" />
+			</a>
+			<img src="images/iloi.jpg" class="top_img" />
+		</div>
+
+		<!--导航及轮播图-->
+		<div class="banner">
+
+			<div class="banner_nav">
+				<div class="box1">
+					<h2>全部分类</h2>
+					<!--全部菜单-->
+					<div id="sider" class="actives">
+						<ul>
+							<li class="box">
+								<a class = "box_a">英雄(133)</a>
+								<div class="i_list">
+									<div class="list_left">
+										<ul>
+											<li>
+												<span><a href = "http://10.9.160.130/codes/html/shop.html">刺客</a></span>
+												<span><a href = "http://10.9.160.130/codes/html/shop.html">战士</a></span>
+												<span><a href = "http://10.9.160.130/codes/html/shop.html">射手</a></span>
+												<span><a href = "http://10.9.160.130/codes/html/shop.html">法师</a></span>
+												<span><a href = "http://10.9.160.130/codes/html/shop.html">辅助</a></span>
+												<span><a href = "http://10.9.160.130/codes/html/shop.html">后期</a></span>
+												<span><a href = "http://10.9.160.130/codes/html/shop.html">推进</a></span>
+												<span><a href = "http://10.9.160.130/codes/html/shop.html">新手</a></span>
+												<span><a href = "http://10.9.160.130/codes/html/shop.html" class = "none">潜行</a></span>
+											</li>
+										</ul>
+									</div>
+									<div class="exp">
+										<h4>英雄</h4>
+										<ul>
+											<li>共有道具 133 个</li>
+											<li>可以点击左侧标签进行类别查询</li>
+										</ul>
+									</div>
+								</div>
+								<em></em>
+							</li>
+							<li class="box">
+								<a class = "box_a">皮肤(508)</a>
+								<div class="i_list">
+									<div class="list_left">
+										<ul>
+											<li>
+												<span><a href = "#">史诗</a></span>
+												<span><a href = "#">传说</a></span>
+												<span><a href = "#">王者</a></span>
+												<span><a href = "#">勇士</a></span>
+												<span><a href = "#" class = "none">限定</a></span>
+											</li>
+										</ul>
+									</div>
+									<div class="exp">
+										<h4>皮肤</h4>
+										<ul>
+											<li>共有道具508 个</li>
+											<li>可以点击左侧标签进行类别查询</li>
+										</ul>
+									</div>
+								</div>
+								<em></em>
+							</li>
+							<li class="box">
+								<a class = "box_a">道具(28)</a>
+								<div class="i_list">
+									<div class="list_left">
+										<ul>
+											<li>
+												<span><a href = "#" class = "none">头像</a></span>
+											</li>
+										</ul>
+									</div>
+									<div class="exp">
+										<h4>道具</h4>
+										<ul>
+											<li>共有道具 28 个</li>
+											<li>可以点击左侧标签进行类别查询</li>
+										</ul>
+									</div>
+								</div>
+								<em></em>
+							</li>
+							<li class="box special">
+								<a href="#" class = "box_a">限定皮肤(28)</a>
+							</li>
+							<li class="box special">
+								<a href="#" class = "box_a">守卫眼皮肤(14)</a>
+							</li>
+							<li class="box special">
+								<a href="#" class = "box_a">道具包(31)</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="box2">
+					<ul>
+						<li class="">
+							<a href="#">首页</a><span></span></li>
+						<li class="">
+							<a href="#">商品列表</a><span></span></li>
+						<li class="">
+							<a href="#">活动专区</a><span></span></li>
+						<li class="">
+							<a href="#">个人中心</a><span></span></li>
+					</ul>
+					<div class="car">
+						<a href="#">
+							<span class="car_bg"></span>
+							<span>
+							我的购物车
+							<strong class = "num">0</strong>
+						</span>
+						</a>
+					</div>
+				</div>
+			</div>
+			<div class="banner_con">
+				<div class="banner_left">
+					<div class="unlog">
+						<a href="#" class="user"></a>
+						<p class="news">
+							英雄联盟折扣多多，惊喜连连！<br/> 马上登录开始精彩的购物体验吧！
+						</p>
+						<div class="d1">
+							<p>
+								<span>最新公告<em>NEWS</em></span>
+								<a href="#">more</a>
+							</p>
+							<ul>
+								<li>
+									<a href="#">财付通退款通知</a>
+								</li>
+								<li>
+									<a href="#">LOL部分道具调整公告</a>
+								</li>
+								<li>
+									<a href="#">LOL铁拳执事-蔚购买补偿</a>
+								</li>
+								<li>
+									<a href="#">发货延时公告07.31</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="banner_right">
+					<div class="div_img">
+						<ul class="div_move">
+							<li class="img">
+								<a href="#">
+									<img src="images/20161024220221_668346.jpg">
+								</a>
+							</li>
+							<li class="img">
+								<a href="#">
+									<img src="images/20161028101528_466092.jpg">
+								</a>
+							</li>
+							<li class="img">
+								<a href="#">
+									<img src="images/20161017194428_209575.jpg">
+								</a>
+							</li>
+							<li class="img">
+								<a href="#">
+									<img src="images/20160429092629_124940.jpg">
+								</a>
+							</li>
+							<li class="img">
+								<a href="#">
+									<img src="images/20161024220221_668346.jpg">
+								</a>
+							</li>
+						</ul>
+					</div>
+					<div class="btn">
+						<a href="#" id="pre" class="btna"></a>
+						<ul>
+							<li class="active">
+								<a href="#">英雄联盟大提莫节</a>
+							</li>
+							<li>
+								<a href="#">英雄联盟周末限时折扣 </a>
+							</li>
+							<li>
+								<a href="#">英雄联盟世界总结赛竞猜</a>
+							</li>
+							<li>
+								<a href="#">英雄联盟无限烈焰戴安娜上线</a>
+							</li>
+
+						</ul>
+						<a href="#" id="next" class="btna"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<!--主体内容-->
+		<div class="content">
+			<div class="con_main">
+				<div class="prod">
+					<div class="title">
+						<h2>推荐道具
+						<span>RECOMMENDED ITEMS</span>
+					</h2>
+						<ul>
+							<li class="style">
+								<a href="#">热门推荐</a>
+							</li>
+							<li>
+								<a href="#">新品推荐</a>
+							</li>
+							<li>
+								<a href="#">特价折扣</a>
+							</li>
+						</ul>
+						<a href="#" class="more"></a>
+					</div>
+					<div class="con">
+
+					</div>
+					<div class="list_a">
+						<a href="#" class="sale">促销打折</a>
+						<a href="#" class="now">最新上架</a>
+						<a href="#" class="hot">热门推荐</a>
+					</div>
+				</div>
+				<div class="like">
+					<div class="title">
+						<h2>猜你喜欢
+						<span>RECOMMENDED ITEMS</span>
+					</h2>
+					</div>
+					<div class="con">
+
+					</div>
+				</div>
+				<div class="buy">
+					<div class="title">
+						<h2>限时抢购
+						<span>RECOMMENDED ITEMS</span>
+					</h2>
+						<a href="#" class="more"></a>
+					</div>
+					<ul>
+
+					</ul>
+				</div>
+				<div class="acti">
+					<div class="title">
+						<h2>精彩活动
+						<span>RECOMMENDED ITEMS</span>
+					</h2>
+						<a href="#" class="more"></a>
+					</div>
+					<ul>
+						<li class="left">
+							<a href="#" class="img_a">
+								<img src="images/1881.jpg" />
+							</a>
+							<div class="act_d">
+								<p>活动时间：长期</p>
+								<a href="#"></a>
+							</div>
+						</li>
+						<li class="right">
+							<a href="#">
+								<img src="images/447cf.jpg" />
+							</a>
+							<div class="act_d">
+								<p>活动时间：长期</p>
+								<a href="#"></a>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="con_hot">
+				<div class="title">
+					<h2>热门排行
+					<span>HOT</span>
+				</h2>
+				</div>
+				<ul>
+				
+				</ul>
+			</div>
+		</div>
+		<!--服务内容-->
+		<div class="infor">
+			<div class="infor_box">
+				<div class="box_t1">
+					<h2 class="h2_01">新手上路</h2>
+					<ul>
+						<li>
+							<a href="#">什么是道具城</a>
+						</li>
+						<li>
+							<a href="#">如何购买</a>
+						</li>
+						<li>
+							<a href="#">如何赠送</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box_t1">
+					<h2 class="h2_02">常见问题</h2>
+					<ul>
+						<li>
+							<a href="#">发货时间</a>
+						</li>
+						<li>
+							<a href="#">如何领取</a>
+						</li>
+						<li>
+							<a href="#">补发规则</a>
+						</li>
+						<li>
+							<a href="#">vip价定义</a>
+						</li>
+						<li>
+							<a href="#">道具状态定义</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box_t1">
+					<h2 class="h2_03">支付方式</h2>
+					<ul>
+						<li>
+							<a href="#">支付方式</a>
+						</li>
+						<li>
+							<a href="#">购物点支付</a>
+						</li>
+						<li>
+							<a href="#">如何充值</a>
+						</li>
+					</ul>
+				</div>
+				<div class="box_ser">
+					<a href="#"></a>
+				</div>
+			</div>
+		</div>
+		<!--底部-->
+		<div class="buttom">
+			<div class="ide">
+				<p>
+					<a href="http://ieg.tencent.com" target="_blank">腾讯互动娱乐</a>
+					<a href="http://http://game.qq.com/contract.shtml" target="_blank">服务条款</a>
+					<a href="http://adver.qq.com/" target="_blank">广告服务</a>
+					<a href="http://game.qq.com/hr/" target="_blank">腾讯游戏招聘</a>
+					<a href="http://sevice.qq.com/" target="_blank">腾讯游戏客服</a>
+					<a href="http://game.qq.com/gnav" target="_blank">游戏地图</a>
+					<a href="http://tgact.qq.com/" target="_blank">游戏活动</a>
+					<a href="http://game.qq.com/brand/business.htm" target="_blank">商务合作</a>
+					<a href="http://www.qq.com/map/" target="_blank">网站导航</a>
+				</p>
+				<p>COPYRIGHT © 1998 – 2016 TENCENT. ALL RIGHTS RESERVED.</p>
+				<p>腾讯公司&nbsp;&nbsp;版权所有</p>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript">
+		$(function() {
+
+			ajaxGoods($(".con"), 0, "../codes/json/data.json");
+			ajaxGoods($(".con"), 1, "../codes/json/datas.json");
+			ajaxHot($(".con_hot").find("ul"), 0, "../codes/json/hot.json");
+			ajaxBuy($(".buy").find("ul"), 0, "../codes/json/buy.json");
+			ajaxGame($(".top").find(".box").find(".inner").find("#people"), 0, "../codes/json/game1.json");
+			ajaxGame($(".top").find(".box").find(".inner").find("#athle"), 0, "../codes/json/game2.json");
+			ajaxGame($(".top").find(".box").find(".inner").find("#relaxa"), 0, "../codes/json/game3.json");
+			ajaxGame($(".top").find(".box").find(".inner").find("#webpage"), 0, "../codes/json/game4.json");
+		});
+	</script>
+
+</html>
