@@ -12,6 +12,7 @@
 		<script type="text/javascript" src="js/perfect_startMove.js"></script>
 		<script type="text/javascript" src="js/jquery-1.11.3.js"></script>
 		<script type="text/javascript" src="js/jquery.cookie.js"></script>
+		<script type="text/javascript" src="js/shoping_car.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
 	</head>
 
@@ -21,7 +22,7 @@
 			<div class="top_login">
 				<div class="top_game">
 					<a href="#" class="tx_game"></a>
-					
+
 					<!--腾讯游戏-->
 					<div class="box">
 						<div class="boxtop spr"><span class="spr" style="width:718px"></span></div>
@@ -31,32 +32,32 @@
 									<h2 class="name spr">
 										角色扮演<span class="amount">(20)</span>
 									</h2>
-									<div class="lst" id = "people">
-									
+									<div class="lst" id="people">
+
 									</div>
 								</div>
 								<div class="lst ath">
 									<h2 class="name spr">
 										竞技游戏<span class="amount">(10)</span>
 									</h2>
-									<div class="lst" id = "athle">
-										
+									<div class="lst" id="athle">
+
 									</div>
 								</div>
 								<div class="lst">
 									<h2 class="name spr">
 										休闲游戏<span class="amount">(4)</span>
 									</h2>
-									<div class="lst"  id = "relaxa">
-										
+									<div class="lst" id="relaxa">
+
 									</div>
 								</div>
 								<div class="lst">
 									<h2 class="name spr">
 										网页游戏<span class="amount">(6)</span>
 									</h2>
-									<div class="lst" id = "webpage">
-										
+									<div class="lst" id="webpage">
+
 									</div>
 								</div>
 							</div>
@@ -114,7 +115,7 @@
 					<div id="sider" class="actives">
 						<ul>
 							<li class="box">
-								<a class = "box_a">英雄(133)</a>
+								<a class="box_a">英雄(133)</a>
 								<div class="i_list">
 									<div class="list_left">
 										<ul>
@@ -142,7 +143,7 @@
 								<em></em>
 							</li>
 							<li class="box">
-								<a class = "box_a">皮肤(508)</a>
+								<a class="box_a">皮肤(508)</a>
 								<div class="i_list">
 									<div class="list_left">
 										<ul>
@@ -166,7 +167,7 @@
 								<em></em>
 							</li>
 							<li class="box">
-								<a class = "box_a">道具(28)</a>
+								<a class="box_a">道具(28)</a>
 								<div class="i_list">
 									<div class="list_left">
 										<ul>
@@ -186,13 +187,13 @@
 								<em></em>
 							</li>
 							<li class="box special">
-								<a href="#" class = "box_a">限定皮肤(28)</a>
+								<a href="#" class="box_a">限定皮肤(28)</a>
 							</li>
 							<li class="box special">
-								<a href="#" class = "box_a">守卫眼皮肤(14)</a>
+								<a href="#" class="box_a">守卫眼皮肤(14)</a>
 							</li>
 							<li class="box special">
-								<a href="#" class = "box_a">道具包(31)</a>
+								<a href="#" class="box_a">道具包(31)</a>
 							</li>
 						</ul>
 					</div>
@@ -213,7 +214,7 @@
 							<span class="car_bg"></span>
 							<span>
 							我的购物车
-							<strong class = "num">0</strong>
+							<strong class = "sc_num">0</strong>
 						</span>
 						</a>
 					</div>
@@ -279,7 +280,7 @@
 						</ul>
 					</div>
 					<div class="btn">
-						<a href="#" id="pre" class="btna"></a>
+						<a id="pre" class="btna"></a>
 						<ul>
 							<li class="active">
 								<a href="#">英雄联盟大提莫节</a>
@@ -295,12 +296,12 @@
 							</li>
 
 						</ul>
-						<a href="#" id="next" class="btna"></a>
+						<a id="next" class="btna"></a>
 					</div>
 				</div>
 			</div>
 		</div>
-		
+
 		<!--主体内容-->
 		<div class="content">
 			<div class="con_main">
@@ -388,7 +389,7 @@
 				</h2>
 				</div>
 				<ul>
-				
+
 				</ul>
 			</div>
 		</div>
@@ -466,14 +467,14 @@
 				<p>腾讯公司&nbsp;&nbsp;版权所有</p>
 			</div>
 		</div>
-		<div class = "point">
-			<h2 id = "tit">温馨提示</h2>
-			<div class = "main">
-				<p id = "copy">该道具已成功添加到您的购物车内</p>
+		<div class="point">
+			<h2 id="tit">温馨提示</h2>
+			<div class="main">
+				<p id="copy">该道具已成功添加到您的购物车内</p>
 			</div>
-			
-			<a type="button" id="boom" href="http://10.9.160.130/codes/html/shop_car.html">进入购物车</a>	
-			<a type="button" class = "addcarbtn" id="goon">继续购物</a>
+
+			<a type="button" id="boom" href="http://10.9.160.130/codes/html/shop_car.html">进入购物车</a>
+			<a type="button" id="goon">继续购物</a>
 		</div>
 	</body>
 	<script type="text/javascript">
@@ -487,6 +488,14 @@
 			ajaxGame($(".top").find(".box").find(".inner").find("#athle"), 0, "../codes/json/game2.json");
 			ajaxGame($(".top").find(".box").find(".inner").find("#relaxa"), 0, "../codes/json/game3.json");
 			ajaxGame($(".top").find(".box").find(".inner").find("#webpage"), 0, "../codes/json/game4.json");
+
+			//購物車提示框
+			$(".point a").click(function() {
+				$(".point").css("display", "none")
+			});
+
+			
+
 		});
 	</script>
 

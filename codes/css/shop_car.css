@@ -173,7 +173,7 @@ thead {
     margin-top: 24px;
 }
 .title_box {
-    background: url(../images/solid.png) repeat-x left bottom;
+    background: url(http://js02.daoju.qq.com/common/images/channel/solid.png) repeat-x left bottom;
     height: 31px;
     position: relative;
     z-index: 3;
@@ -194,7 +194,7 @@ thead {
     color: #564e4c;
 }
 .title_box li a {
-    background: url(../images/commen.png) no-repeat;
+    background: url(../img/commen.png) no-repeat;
     background-position: -237px -80px;
     display: block;
     height: 31px;

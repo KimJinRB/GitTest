@@ -2,7 +2,7 @@ $(function() {
 	//页面刷新时获取购物车数量;
 	sc_car()
 
-	$('.goods_box ul').on('click', '.sc_btn', function() {
+	$('.goods_box ul').on('click', '.addcarbtn', function() {
 
 			//购物车数量增加;
 			var id = this.id
@@ -19,7 +19,8 @@ $(function() {
 				//遍历所有对象。如果id相同，让该商品数量递增 ;
 				for(var attr in arr) {
 					if(arr[attr].id == id) {
-						arr[attr].num = arr[attr].num + 1; //让json结构中num自增。
+						alert("该商品只能购买一件");
+						//arr[attr].num = arr[attr].num + 1; //让json结构中num自增。
 						var cookieStr = JSON.stringify(arr); //将json对象转换成字符串.
 						$.cookie('goods', cookieStr);
 						same = true;

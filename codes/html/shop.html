@@ -2,7 +2,7 @@
 <html>
 
 	<head>
-		<meta charset="{CHARSET}">
+		<meta charset="utf-8">
 		<title></title>
 		<link rel="stylesheet" href="../css/shop.css" />
 		<link rel="stylesheet" href="../css/index.css" />
@@ -213,7 +213,7 @@
 							<span class="car_bg"></span>
 							<span>
 							我的购物车
-							<strong class = "num">0</strong>
+							<strong class = "sc_num">0</strong>
 						</span>
 						</a>
 					</div>
@@ -267,10 +267,21 @@
 					<div class="filter_box">
 						<div class="filter_title ">
 							<h3 class="l b">商品筛选</h3>
-							
+
 						</div>
 						<ul id="tags_ul" class="tags_ul" style="">
-				<li><input name="tagbox_all" id="tagbox_all" type="checkbox" value="">全部</li><li><input name="tagbox" type="checkbox" value="0">刺客</li><li><input name="tagbox" type="checkbox" value="1">坦克</li><li><input name="tagbox" type="checkbox" value="2">法师</li><li><input name="tagbox" type="checkbox" value="3">辅助</li><li><input name="tagbox" type="checkbox" value="4">后期</li><li><input name="tagbox" type="checkbox" value="5">战士</li><li><input name="tagbox" type="checkbox" value="6">推进</li><li><input name="tagbox" type="checkbox" value="7">新手</li><li><input name="tagbox" type="checkbox" value="8">潜行</li><li><input name="tagbox" type="checkbox" value="9">打野</li></ul>
+							<li><input name="tagbox_all" id="tagbox_all" type="checkbox" value="">全部</li>
+							<li><input name="tagbox" type="checkbox" value="0">刺客</li>
+							<li><input name="tagbox" type="checkbox" value="1">坦克</li>
+							<li><input name="tagbox" type="checkbox" value="2">法师</li>
+							<li><input name="tagbox" type="checkbox" value="3">辅助</li>
+							<li><input name="tagbox" type="checkbox" value="4">后期</li>
+							<li><input name="tagbox" type="checkbox" value="5">战士</li>
+							<li><input name="tagbox" type="checkbox" value="6">推进</li>
+							<li><input name="tagbox" type="checkbox" value="7">新手</li>
+							<li><input name="tagbox" type="checkbox" value="8">潜行</li>
+							<li><input name="tagbox" type="checkbox" value="9">打野</li>
+						</ul>
 						<ul>
 							<li>
 								<label>关键字：</label>
@@ -310,7 +321,7 @@
 							<a title="热门推荐" class="hot">热门推荐</a>
 						</div>
 					</div>
-					<div class = "product_list">
+					<div class="product_list">
 						<div class="con">
 
 						</div>
@@ -503,14 +514,14 @@
 				<p>腾讯公司&nbsp;&nbsp;版权所有</p>
 			</div>
 		</div>
-		<div class = "point">
-			<h2 id = "tit">温馨提示</h2>
-			<div class = "main">
-				<p id = "copy">该道具已成功添加到您的购物车内</p>
+		<div class="point">
+			<h2 id="tit">温馨提示</h2>
+			<div class="main">
+				<p id="copy">该道具已成功添加到您的购物车内</p>
 			</div>
-			
-			<a type="button"  id="boom" href="http://10.9.160.130/codes/html/shop_car.html">进入购物车</a>	
-			<a type="button" class = "addcarbtn" id="goon">继续购物</a>
+
+			<a type="button" id="boom" href="http://10.9.160.130/codes/html/shop_car.html">进入购物车</a>
+			<a type="button"  id="goon">继续购物</a>
 		</div>
 	</body>
 	<script type="text/javascript">
@@ -524,6 +535,11 @@
 			ajaxGame($(".top").find(".box").find(".inner").find("#athle"), 0, "../../codes/json/game2.json");
 			ajaxGame($(".top").find(".box").find(".inner").find("#relaxa"), 0, "../../codes/json/game3.json");
 			ajaxGame($(".top").find(".box").find(".inner").find("#webpage"), 0, "../../codes/json/game4.json");
+
+			//購物車提示框
+			$(".point a").click(function(){
+				$(".point").css("display", "none")
+			});
 		});
 	</script>
 
