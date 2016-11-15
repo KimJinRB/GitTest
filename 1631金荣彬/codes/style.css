@@ -1,0 +1,354 @@
+* {
+	margin: 0;
+	padding: 0;
+	text-decoration: none;
+	list-style: none;
+	font-size: 12px;
+}
+
+html,
+dody {
+	width: 100%;
+	height: 100%;
+	background: #fff;
+}
+.wrap{
+	width: 100%;
+	position: relative;
+	padding-top: 50px;
+	overflow: hidden;
+	
+}
+/*左侧*/
+.left_box{
+	
+	width: 1160px;
+	margin: 0 auto;
+	/*background: greenyellow;*/
+	overflow: hidden;
+}
+
+
+/*滚动图*/
+.banner{
+	width: 890px;
+	height: 490px;
+	background: red;
+	float: left;
+	border: 5px solid red;
+	text-align: center;
+	overflow: hidden;
+}
+.banner .div_img{
+	width: 890px;
+	height: 490px;
+	overflow: hidden;
+	position: relative;
+	display: block;
+	
+}
+.banner .div_move{
+	position: absolute;
+}
+.banner .div_move li{
+	width: 890px;
+	height: 490px;	
+}
+.banner .div_move li img{
+	width: 100%;
+}
+
+
+
+
+
+/*侧边栏*/
+.list{
+	width: 260px;
+	height: 480px;
+	float: left;
+	background: cornflowerblue;
+	padding-top: 20px;
+}
+.list ul li{
+	list-style: none;
+	width: 260px;
+	height: 40px;
+	margin-bottom: 10px;
+	margin-left: 15px;	
+}
+.list ul li img{
+	width: 40px;
+	height: 40px;
+	display: block;
+	float: left;
+	margin-right: 20px;
+}
+.list ul li p{
+	float: left;
+	line-height: 40px;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+
+#img1{filter:alpha(opacity=30); opacity: 0.3}
+
+/*商品列表*/
+.cont{
+	width: 1160px;
+	overflow: hidden;
+	
+}
+
+ .cont dl {
+	width: 260px;
+	height: 100px;
+	float: left;
+	display: block;
+	overflow: visible;
+	overflow: hidden;
+	padding: 10px;
+	margin: 10px 3px;
+	border: 2px solid greenyellow;
+	position: relative;
+	filter:alpha(opacity=50); opacity: 0.5
+}
+
+ .cont dl dt {
+	width: 106px;
+	height: 66px;
+	display: block;
+	float: left;
+	/*border: 2px solid #e6e6e6;*/
+	position: relative;
+}
+
+ .cont dl dt a {
+	display: block;
+	width: 100%;
+}
+
+.cont dl dt img {
+	position: absolute;top: 5px;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+.cont dl dd {
+	width: 140px;
+	height: 90px;
+	line-height: 20px;
+	float: right;
+}
+
+.cont dl dd a {
+	overflow: hidden;
+}
+
+.cont dl dd a strong {
+	width: 140px;
+	height: 20px;
+	display: block;
+	overflow: hidden;
+	cursor: pointer;
+	color: #505050;
+}
+
+.cony dl dd .lis_1 {
+	line-height: 20px;
+}
+
+.cont dl dd .lis_1 .t2 {
+	color: #f00;
+	line-height: 20px;
+}
+
+.cont dl dd .lis_1 .t2_fwd {
+	font-weight: bolder;
+	color: #f00;
+	line-height: 20px;
+}
+
+.cont dl dd .lis_2 {
+	width: 140px;
+	margin-top: 1px;
+	line-height: 20px;
+	overflow: hidden;
+	padding-left: 40px;
+	background: url(images/comm_ico.png) no-repeat 0 3px;
+	background-position: 0 -15px;
+}
+
+.cont dl dd .lis_2 a {
+	width: 65px;
+	height: 20px;
+	line-height: 19px;
+	display: block;
+	color: #fff;
+	cursor: pointer;
+	font-size: 12px;
+	text-align: center;
+	background: url(images/commen.png) no-repeat;
+	background-position: -403px 0;
+	float: left;
+}
+.s_move{
+	width: 284px;
+	height: 30px;
+	text-align: center;
+	line-height: 30px;
+	background: peru;
+	color: white;
+	left: 0;
+	top: 124px;
+	position: absolute;
+	cursor: pointer;
+}
+
+
+/*购物车*/
+.right_box{
+	position: fixed;
+	right: 0px;
+	top: 20px;	
+}
+.cart{
+	height: 900px;
+	width: 300px;	
+	background: white;
+	position: absolute;
+	top: 0;
+	right: -300px;
+	border: 2px solid blue;
+	
+}
+.car_list{
+	height: 900px;
+	width: 300px;
+	overflow: hidden;
+}
+.sc_box{
+	width: 40px;
+	height: 40px;
+	padding: 4px 6px;
+	background: url(images/toolbars.png) #999 15px 15px no-repeat;
+	position: relative;
+	left: -52px;
+	top: 50%;
+	margin-top: -24px;
+}
+.sc_box .num{
+	position: absolute;
+	padding: 2px 8px;
+	border-radius: 50%;
+	background: red;
+	color: #fff;
+	top: -8px;
+	left: 20px;
+	z-index: 1;
+}
+
+
+/*购物列表*/
+#ul_car{
+	width: 100%;
+	overflow: hidden;
+}
+
+ #ul_car dl {
+	width: 260px;
+	height: 100px;
+	float: left;
+	display: block;
+	overflow: visible;
+	padding: 10px;
+	margin: 10px 3px;
+	border: 2px solid greenyellow;
+	position: relative;
+}
+
+#ul_car dl dt {
+	width: 106px;
+	height: 66px;
+	display: block;
+	float: left;
+	/*border: 2px solid #e6e6e6;*/
+	position: relative;
+}
+
+ #ul_car dl dt a {
+	display: block;
+	width: 100%;
+}
+
+#ul_car dl dt img {
+	position: absolute;top: 5px;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+
+#ul_car dl dd {
+	width: 140px;
+	height: 90px;
+	line-height: 20px;
+	float: right;
+}
+
+#ul_car dl dd a {
+	overflow: hidden;
+}
+
+#ul_car dl dd a strong {
+	width: 140px;
+	height: 20px;
+	display: block;
+	overflow: hidden;
+	cursor: pointer;
+	color: #505050;
+}
+
+#ul_car dl dd .lis_1 {
+	line-height: 20px;
+}
+
+#ul_car dl dd .lis_1 .t2 {
+	color: #f00;
+	line-height: 20px;
+}
+
+#ul_car dl dd .lis_1 .t2_fwd {
+	font-weight: bolder;
+	color: #f00;
+	line-height: 20px;
+}
+
+#ul_car dl dd .lis_2 {
+	width: 140px;
+	margin-top: 1px;
+	line-height: 20px;
+	overflow: hidden;
+	
+	
+}
+
+#ul_car dl dd .lis_2 a {
+	width: 65px;
+	height: 20px;
+	line-height: 19px;
+	display: block;
+	color: #fff;
+	overflow: hidden;
+	font-size: 12px;
+	text-align: center;
+	background: url(images/commen.png) no-repeat;
+	background-position: -403px 0;
+	float: left;
+	cursor: pointer;
+}
+#ul_car dl dd .lis_2 .remove{
+	margin-left: 10px;
+}
+

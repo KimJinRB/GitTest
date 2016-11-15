@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<link rel="stylesheet" href="style.css" />
+		<script src="jquery-1.11.1.js" type="text/javascript" charset="utf-8"></script>
+		<script src="jquery.cookie.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" src="MQuery_animate.js"></script>
+		<script type="text/javascript" src="perfect_startMove.js"></script>
+		<script type="text/javascript" src="jquery.cookie.js"></script>
+		<script type="text/javascript" src="index.js"></script>
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="left_box">
+				<div class="on">
+					<div class="list">
+						<ul>
+							<!--<li>
+								<img src = "#" />
+								<p class = "name"></p>
+							</li>-->
+						</ul>
+					</div>
+					<div class="banner">
+						<div class="div_img">
+							<ul class="div_move">
+								<!--<li>
+									<div>
+										<a href="#">
+											<img src="#">/>
+										</a>
+									</div>
+								</li>-->
+
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="cont">
+					<!--<dl>
+						<dt>
+							<img src = "#" />
+						</dt>
+						<dd>
+							<p class="name"></p>
+							<a class="btn buy"></a>
+							<a class="btn add"></a>
+						</dd>
+					</dl>-->
+				</div>
+			</div>
+			<div class="right_box">
+				<div class="cart">
+					<div class="sc_box">
+						<strong class="num">0</strong>
+					</div>
+					<div class="car_list">
+						<ul id="ul_car">
+
+						</ul>
+					</div>
+				</div>
+			</div>
+		</div>
+	</body>
+
+	<script type="text/javascript">
+		/*侧边栏*/
+		$.ajax({
+			type: "get",
+			url: "classify.php",
+			success: function(data) {
+				var html = "";
+				var arr = JSON.parse(data);
+				arr = arr.subcategories;
+				for(var i in arr) {
+					html += "<li><img src = '" + arr[i].iconUrl + "' /><p class = 'name'>" + arr[i].name + "</p></li>"
+				}
+				$(".list ul").append(html);
+				$(".list li").hover(function() {
+					$(this).css("background", "yellow").css("color", "red").css("cursor", "pointer")
+				}, function() {
+					$(this).css("background", "cornflowerblue").css("color", "black").css("cursor", "none")
+				});
+			}
+		});
+		/*滚动图*/
+		$.ajax({
+			type: "get",
+			url: "slide.php",
+			success: function(data) {
+				var html = ""
+				var arr = JSON.parse(data)
+				arr = arr.advs
+				for(var i in arr) {
+					html += "<li><img src='" + arr[i].bgUrl + "'/></li>"
+				}
+				$(".div_img ul").append(html)
+				var last = $(".div_img ul li").eq(0).clone()
+				$(".div_img ul").append(last)
+
+				var isNow = 0
+				var timer = null
+				timer = setInterval(function() {
+					isNow++
+					$(".div_move").stop().animate({
+						"top": -$(".div_move").find("li").height() * isNow
+					}, "slow", function() {
+						if(isNow >= $(".div_move").find("li").size() - 1) {
+
+							//clearInterval(timer)
+							$(".div_move").css("top", "0px")
+							isNow = 0
+						}
+					});
+
+				}, 2000)
+				$(".div_move").mouseenter(function() {
+					clearInterval(timer)
+				});
+				$(".div_move").mouseout(function() {
+					timer = setInterval(function() {
+						isNow++
+						$(".div_move").stop().animate({
+							"top": -$(".div_move").find("li").height() * isNow
+						}, "slow", function() {
+							if(isNow >= $(".div_move").find("li").size() - 1) {
+
+								//clearInterval(timer)
+								$(".div_move").css("top", "0px")
+								isNow = 0
+							}
+						})
+					}, 2000)
+				});
+
+			}
+
+		});
+
+		/*产品	*/
+		$.ajax({
+			type: "get",
+			url: "category.php",
+			success: function(data) {
+				var html = ""
+				var arr = JSON.parse(data)
+				arr = arr.courses
+
+				for(var i in arr) {
+					html += "<dl id = '" + arr[i]._id + "'><dt><a href='html/detail.html'><img src='" +
+						arr[i].bgUrl + "'/></a></dt><dd><a href='#'><strong>" +
+						arr[i].title + "</strong></a><div class = 'lis_1'>优惠价<span class = 't2'>&nbsp;&nbsp;&nbsp;200</span><span class = 't2_fwd'>元</span></div><div class = 'lis_1'>财付通价<span class = 't2_fwd'>&nbsp;&nbsp;￥</span><span class = 't2'>150</span></div><div class = 'lis_2'><a class = 'addcarbtn' id = '120" +
+						arr[i]._id + "'>加入购物车</a></div></dd><div class = 's_move'>立即购买</div></dl>"
+				}
+				$(".cont").html(html);
+				$(".cont .addcarbtn").css("cursor", "pointer")
+
+				/*商品运动*/
+				$('.cont dl').mouseenter(function() {
+
+					$(this).find(".s_move").stop().animate({
+						top: '94px'
+					})
+					$(this).stop().animate({
+						opacity: 1
+					})
+				});
+
+				$(".cont dl").mouseleave(function() {
+
+					$(this).find(".s_move").stop().animate({
+						top: '124px'
+					})
+					$(this).stop().animate({
+						opacity: 0.3
+					})
+				});
+				
+				
+				
+				$(".cont dl").mouseenter(function() {
+					$(this).css("background", "red");
+					$(this).find("dd").find("strong").css("color", "white");
+					$(this).find("dd").find("div").css("color", "white");
+					$(this).find("dd").find("span").css("color", "yellow");
+					$(this).find("dd").find(".lis_2").find("a").css("color", "black");
+					$(this).find("dd").find(".lis_2").find("a").css("background", "yellow");
+				});
+				$(".cont dl").mouseleave(function() {
+					$(this).css("background", "white");
+					$(this).find("dd").find("strong").css("color", "black");
+					$(this).find("dd").find("div").css("color", "black");
+					$(this).find("dd").find("span").css("color", "red");
+					$(this).find("dd").find(".lis_2").find("a").css("color", "white");
+					$(this).find("dd").find(".lis_2").find("a").css("background", "red");
+				});
+
+				//页面刷新时获取购物车数量;
+				
+				inGood();
+
+				$(".addcarbtn").click(function() {
+					var same = false
+					if(!$.cookie("cartgoods")) {
+						var cookiestr = "[{name:'" + $(this).parent().parent().find("a").find("strong").html() +
+							"',id:'" + $(this).parent().parent().parent().attr("id") + "',img:'" +
+							$(this).parent().parent().parent().find("dt").find("img").attr("src") + "',price:'" +
+							$(this).parent().parent().find(".lis_1").find(".t2").html() + "',num:1}]"
+						$.cookie("cartgoods", cookiestr, {
+							expires: 7
+						})
+
+					} else {
+						var arr = eval($.cookie("cartgoods"))
+						for(var i in arr) {
+							if($(this).parent().parent().parent().attr("id") == arr[i].id) {
+								arr[i].num++
+									var cookie = JSON.stringify(arr)
+								$.cookie("cartgoods", cookie, {
+									expires: 7
+								})
+								same = true
+							}
+						}
+						if(!same) {
+							var _arr = {
+								name: $(this).parent().parent().find("a").find("strong").html(),
+								id: $(this).parent().parent().parent().attr("id"),
+								img: $(this).parent().parent().parent().find("dt").find("img").attr("src"),
+								price: $(this).parent().parent().find(".lis_1").find(".t2").html(),
+								num: 1
+							}
+							arr.push(_arr)
+							var cookie = JSON.stringify(arr)
+							$.cookie("cartgoods", cookie, {
+								expires: 7
+							})
+						}
+					}
+					inGood();
+				})
+
+			}
+
+		});
+
+		/*购物车运动*/
+		$('.cart').mouseenter(function() {
+
+			$(this).stop().animate({
+				right: '0'
+			})
+
+		});
+		$('.cart').mouseleave(function() {
+
+			$(this).stop().animate({
+				right: '-300px'
+			})
+		});
+
+			
+function inGood(){
+			if($.cookie("cartgoods")){
+				
+				$("#ul_car").empty()
+				var arr = eval($.cookie("cartgoods"))
+				var sc_num = 0
+				var sc_price = ""
+				var html=""
+				
+				for(var i in arr) {
+					sc_num = Number(arr[i].num) + sc_num;
+					
+						html += "<dl id = '" + arr[i].id + "'><dt><a href='html/detail.html'><img src='" +
+							arr[i].img + "'/></a></dt><dd><a href='#'><strong>" +
+							arr[i].title + "</strong></a><div class = 'lis_1'>商品数量<span class = 't2'>&nbsp;&nbsp;&nbsp;" + 
+							arr[i].num+ "</span><span class = 't2_fwd'></span></div><div class = 'lis_1'>查看购物券<span class = 't2_fwd'>&nbsp;&nbsp;</span><span class = 't2'></span></div><div class = 'lis_2'><a class = 'addcarbtn' id = '120" +
+							arr[i]._id + "'>去结算</a><a class = 'remove'>删除</a></div></dd></dl>"
+					}
+				$('.num').html(sc_num);
+				$("#ul_car").append(html)
+				$("#ul_car .addcarbtn").css("cursor", "pointer");
+				$("#ul_car").find(".remove").click(function(){
+					var arr=eval($.cookie("cartgoods"))
+					for(var i in arr){
+						if($(this).parent().parent().parent().attr("id")==arr[i].id){
+							arr.splice(i,1)
+							var cookie=JSON.stringify(arr)
+							$.cookie("cartgoods",cookie,{expires:7})
+							inGood()
+						}
+					}
+				})
+			}
+		}		
+		
+
+	</script>
+
+</html>
